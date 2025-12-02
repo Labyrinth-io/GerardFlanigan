@@ -17,7 +17,7 @@ const projects = [
   },
   {
     id: 2,
-    title: 'Mosman Luxury Residence', 
+    title: 'Mosman Luxury Residence',
     category: 'Premium Homes',
     location: 'Mosman, NSW',
     year: '2024',
