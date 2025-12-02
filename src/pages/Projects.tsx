@@ -8,12 +8,12 @@ const categories = ['All', 'Commercial', 'Premium Homes', 'Duplexes', 'Renovatio
 const projects = [
   {
     id: 1,
-    title: 'Harbourview Commercial Complex',
+    title: 'Friendly Society Hospital',
     category: 'Commercial',
-    location: 'Bundaberg CBD',
+    location: 'Bundaberg West',
     year: '2024',
-    image: 'https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=800&q=80',
-    description: 'A landmark 12-storey commercial development featuring premium office spaces and ground-floor retail.',
+    image: '/images/Friendlies.jpg',
+    description: 'A high-quality medical suites build for The Friendlies Hospital, designed and constructed to meet strict clinical standards while maintaining exceptional finish and functionality.',
   },
   {
     id: 2,
