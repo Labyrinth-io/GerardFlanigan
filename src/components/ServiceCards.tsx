@@ -18,7 +18,7 @@ const services = [
   {
     icon: Layers,
     title: 'Duplexes',
-    description: 'Investment-grade dual occupancy builds maximizing land value with quality design and construction.',
+    description: 'Investment-grade dual occupancy builds maximising land value with quality design and construction.',
   },
   {
     icon: Hammer,
