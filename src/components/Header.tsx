@@ -32,12 +32,12 @@ export default function Header() {
       style={{ backgroundColor: '#221F20' }}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        {/* MAIN DESKTOP ROW */}
+        {/* MAIN ROW */}
         <div className="flex items-center h-20 gap-6">
           {/* Logo + wordmark */}
           <Link
             to={createPageUrl('Home')}
-            className="flex items-center gap-3 flex-shrink-0"
+            className="flex items-center gap-2 sm:gap-3 flex-shrink-0"
           >
             <img
               src="/Gerard Logo copy.svg"
@@ -46,7 +46,7 @@ export default function Header() {
             />
             <div className="flex flex-col leading-tight">
               <span
-                className="text-xl sm:text-2xl font-bold tracking-wide"
+                className="text-lg sm:text-2xl font-bold tracking-wide"
                 style={{ color: '#FEFEFE', fontFamily: 'system-ui' }}
               >
                 GERARD FLANIGAN
@@ -55,7 +55,7 @@ export default function Header() {
                 className="uppercase"
                 style={{
                   color: '#29ABE2',
-                  letterSpacing: '1.28em', // <- your tuned value
+                  letterSpacing: '1.28em', // your tuned value
                   fontSize: '0.6rem',
                   lineHeight: '1rem',
                   transform: 'translateY(1px)',
@@ -69,7 +69,7 @@ export default function Header() {
             </div>
           </Link>
 
-          {/* Nav in the middle */}
+          {/* Nav in the middle (desktop) */}
           <nav className="hidden lg:flex items-center justify-center gap-6 flex-1">
             {navItems.map((item) => (
               <Link
@@ -87,7 +87,7 @@ export default function Header() {
             ))}
           </nav>
 
-          {/* Phone + CTA on the right */}
+          {/* Phone + CTA (desktop) */}
           <div className="hidden md:flex items-center gap-4 flex-shrink-0">
             <a
               href="tel:0477037911"
@@ -145,6 +145,7 @@ export default function Header() {
                 {item.name}
               </Link>
             ))}
+
             <a
               href="tel:0477037911"
               className="flex items-center gap-2 py-2"
@@ -153,6 +154,7 @@ export default function Header() {
               <Phone size={18} style={{ color: '#29ABE2' }} />
               <span className="font-medium">0477 037 911</span>
             </a>
+
             <Link
               to={createPageUrl('Contact')}
               className="inline-block px-6 py-3 text-sm font-semibold uppercase tracking-wide text-center"
