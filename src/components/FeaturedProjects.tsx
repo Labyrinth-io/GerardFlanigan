@@ -9,7 +9,7 @@ const projects = [
     id: 1,
     title: 'Friendly Society Hospital',
     category: 'Commercial',
-    image: '',
+    image: '/images/Friendlies.jpg',
     location: 'Bundaberg West',
   },
   {
