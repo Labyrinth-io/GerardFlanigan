@@ -205,7 +205,7 @@ export default function Testimonials() {
               className="text-3xl sm:text-4xl font-bold mb-6"
               style={{ color: '#221F20' }}
             >
-              Trusted by Clients Across Sydney
+              Trusted by Clients Across Bundaberg
             </motion.h2>
             <motion.div
               initial={{ scaleX: 0 }}

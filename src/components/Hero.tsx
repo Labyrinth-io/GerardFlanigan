@@ -28,7 +28,7 @@ export default function Hero() {
             className="text-sm sm:text-base uppercase tracking-[0.3em] mb-6"
             style={{ color: '#B8B8B8' }}
           >
-            Sydney's Trusted Builder Since 1998
+            Bundaberg's Trusted Builder Since 1998
           </motion.p>
 
           <motion.h1

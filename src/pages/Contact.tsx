@@ -37,7 +37,7 @@ export default function Contact() {
     {
       icon: MapPin,
       title: 'Location',
-      value: 'Sydney, NSW, Australia',
+      value: 'Bundaberg, QLD, Australia',
       link: null,
     },
     {

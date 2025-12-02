@@ -26,7 +26,7 @@ export default function Footer() {
               </span>
             </div>
             <p style={{ color: '#B8B8B8' }} className="text-sm leading-relaxed">
-              Building excellence across Sydney for over 25 years. Commercial projects,
+              Building excellence across Bundaberg for over 25 years. Commercial projects,
               premium homes, and quality renovations.
             </p>
             <div
@@ -129,7 +129,7 @@ export default function Footer() {
                   className="text-sm"
                   style={{ color: '#B8B8B8' }}
                 >
-                  Sydney, NSW<br />Australia
+                  Bundaberg, QLD<br />Australia
                 </span>
               </li>
             </ul>
