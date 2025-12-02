@@ -45,24 +45,19 @@ export default function Header() {
                 style={{ color: '#FEFEFE', fontFamily: 'system-ui' }}
               >
                 GERARD FLANIGAN
+              </span>
               <span
-  className="uppercase"
-  style={{
-    color: '#29ABE2',
-    letterSpacing: '0.65em',
-    fontSize: '0.6rem',        // Scales proportionally
-    lineHeight: '1rem',
-    transform: 'translateY(1px)', // Aligns visually
-    whiteSpace: 'nowrap',
-    display: 'inline-block',
-    maxWidth: '100%',          // Prevents overshooting width
-  }}
->
-  CONSTRUCTIONS
-</span>
+                className="text-xs sm:text-sm uppercase"
+                style={{
+                  color: '#29ABE2',
+                  letterSpacing: '0.85em'
+                }}
+              >
+                CONSTRUCTIONS
+              </span>
             </div>
           </Link>
-
+ 
           <nav className="hidden lg:flex items-center space-x-8">
             {navItems.map((item) => (
               <Link
