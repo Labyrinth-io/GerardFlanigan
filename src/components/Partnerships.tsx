@@ -1,0 +1,106 @@
+import React from 'react';
+import { motion } from 'framer-motion';
+import { Shield, Award, CheckCircle2, BadgeCheck } from 'lucide-react';
+
+const accreditations = [
+  { icon: Shield, name: 'Master Builders Association', description: 'Certified Member' },
+  { icon: Award, name: 'HIA', description: 'Housing Industry Association' },
+  { icon: CheckCircle2, name: 'Licensed & Insured', description: 'Full Coverage' },
+  { icon: BadgeCheck, name: 'NSW Fair Trading', description: 'Registered Builder' },
+];
+
+export default function Partnerships() {
+  return (
+    <section className="py-24" style={{ backgroundColor: '#FFFFFF' }}>
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="text-center mb-16">
+          <motion.span
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="text-sm uppercase tracking-[0.3em] block mb-4"
+            style={{ color: '#0071BC' }}
+          >
+            Trusted & Accredited
+          </motion.span>
+          <motion.h2
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ delay: 0.1 }}
+            className="text-3xl sm:text-4xl font-bold mb-6"
+            style={{ color: '#221F20' }}
+          >
+            Industry Partnerships
+          </motion.h2>
+          <motion.div
+            initial={{ scaleX: 0 }}
+            whileInView={{ scaleX: 1 }}
+            viewport={{ once: true }}
+            transition={{ delay: 0.2 }}
+            className="w-24 h-0.5 mx-auto"
+            style={{ backgroundColor: '#D4AF37' }}
+          />
+        </div>
+
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
+          {accreditations.map((item, index) => (
+            <motion.div
+              key={item.name}
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ delay: index * 0.1 }}
+              className="text-center p-6 group"
+            >
+              <div
+                className="w-20 h-20 mx-auto mb-4 flex items-center justify-center transition-all duration-300 group-hover:scale-110"
+                style={{
+                  backgroundColor: '#F8F8F8',
+                  border: '2px solid #E6E6E6',
+                }}
+              >
+                <item.icon
+                  size={36}
+                  style={{ color: '#0071BC' }}
+                  strokeWidth={1.5}
+                />
+              </div>
+              <h4
+                className="font-semibold mb-1"
+                style={{ color: '#221F20' }}
+              >
+                {item.name}
+              </h4>
+              <p
+                className="text-sm"
+                style={{ color: '#666666' }}
+              >
+                {item.description}
+              </p>
+            </motion.div>
+          ))}
+        </div>
+
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          className="mt-16 text-center p-8"
+          style={{
+            backgroundColor: '#F8F8F8',
+            borderLeft: '4px solid #D4AF37',
+          }}
+        >
+          <p
+            className="text-lg italic"
+            style={{ color: '#5A5A5A' }}
+          >
+            "Over 25 years of building excellence with a reputation built on trust,
+            quality craftsmanship, and exceptional client relationships."
+          </p>
+        </motion.div>
+      </div>
+    </section>
+  );
+}
