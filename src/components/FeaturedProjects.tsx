@@ -7,10 +7,10 @@ import { ArrowUpRight } from 'lucide-react';
 const projects = [
   {
     id: 1,
-    title: 'Harbourview Commercial Complex',
+    title: 'Friendly Society Hospital',
     category: 'Commercial',
-    image: 'https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=800&q=80',
-    location: 'Bundaberg CBD',
+    image: 'https://www.empireengineering.com.au/projects/friendly-society-private-hospital-medical-suites-bundaberg',
+    location: 'Bundaberg West',
   },
   {
     id: 2,
