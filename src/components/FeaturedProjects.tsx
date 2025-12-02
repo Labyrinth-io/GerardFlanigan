@@ -9,7 +9,7 @@ const projects = [
     id: 1,
     title: 'Friendly Society Hospital',
     category: 'Commercial',
-    image: 'https://www.empireengineering.com.au/projects/friendly-society-private-hospital-medical-suites-bundaberg',
+    image: '',
     location: 'Bundaberg West',
   },
   {
