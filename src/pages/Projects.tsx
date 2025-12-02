@@ -9,17 +9,7 @@ const categories = ['All', 'Commercial', 'Premium Homes', 'Residential', 'Duplex
 const projects = [
   // COMMERCIAL (multi-level projects)
   {
-    id: 1,
-    title: '1 Bayne Street, West Gladstone',
-    category: 'Commercial',
-    location: 'West Gladstone, QLD',
-    year: '2014',
-    image: '/images/baynestreet.webp',
-    description:
-      'Multi-level apartment complex in West Gladstone, delivering modern, low-maintenance living close to the CBD.',
-  },
-  {
-    id: 2,
+  id: 1,
     title: 'Friendlies Medical Suites, Bundaberg',
     category: 'Commercial',
     location: 'Bundaberg West, QLD',
@@ -29,14 +19,24 @@ const projects = [
       'Purpose-built specialist medical suites constructed behind the Friendly Society Private Hospital to expand Bundaberg’s healthcare precinct.',
   },
   {
-    id: 3,
+  id: 2,
     title: '39 Scenery Street, West Gladstone',
     category: 'Commercial',
     location: 'West Gladstone, QLD',
     year: '2013',
     image: '/images/scenerystreet.jpg',
     description:
-      'A contemporary multi-level townhouse development maximising an elevated site with outlooks over West Gladstone.',
+      'A contemporary multi-level townhouse development maximising an elevated site with outlooks over West Gladstone.', 
+  },
+  {
+    id: 3,
+    title: '1 Bayne Street, West Gladstone',
+    category: 'Commercial',
+    location: 'West Gladstone, QLD',
+    year: '2014',
+    image: '/images/baynestreet.webp',
+    description:
+      'Multi-level apartment complex in West Gladstone, delivering modern, low-maintenance living close to the CBD.',
   },
 
   // PREMIUM HOMES
