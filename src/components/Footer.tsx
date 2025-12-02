@@ -18,13 +18,13 @@ export default function Footer() {
                 className="h-16 w-16 mb-4"
               />
               <span
-                className="text-2xl font-bold tracking-wide block"
-                style={{ color: '#FEFEFE' }}
+                className="text-xl sm:text-2xl font-bold tracking-wide"
+                style={{ color: '#FEFEFE', fontFamily: 'system-ui' }}
               >
                 GERARD FLANIGAN
               </span>
               <span
-                className="text-sm uppercase"
+                className="text-xs sm:text-sm uppercase"
                 style={{
                   color: '#29ABE2',
                   letterSpacing: '0.85em'
