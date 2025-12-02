@@ -3,59 +3,60 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { ArrowUpRight, MapPin, Calendar } from 'lucide-react';
 import CTAStrip from '../components/CTAStrip';
 
-const categories = ['All', 'Commercial', 'Premium Homes', 'Duplexes', 'Renovations'];
+// ✅ TAB CATEGORIES
+const categories = ['All', 'Commercial', 'Premium Homes', 'Residential', 'Duplex'];
 
 const projects = [
-  // MULTIPLE LEVEL PROJECTS
+  // COMMERCIAL (multi-level projects)
   {
     id: 1,
     title: '1 Bayne Street, West Gladstone',
-    category: 'Multiple Level',
+    category: 'Commercial',
     location: 'West Gladstone, QLD',
-    year: '2014', // building completed approx. 2014
-    image: '/images/baynestreet.webp', // update to your actual filename
+    year: '2014',
+    image: '/images/baynestreet.webp',
     description:
       'Multi-level apartment complex in West Gladstone, delivering modern, low-maintenance living close to the CBD.',
   },
   {
     id: 2,
     title: 'Friendlies Medical Suites, Bundaberg',
-    category: 'Multiple Level',
+    category: 'Commercial',
     location: 'Bundaberg West, QLD',
     year: '2015',
-    image: '/images/Friendlies.jpg', // matches your FeaturedProjects
+    image: '/images/Friendlies.jpg',
     description:
       'Purpose-built specialist medical suites constructed behind the Friendly Society Private Hospital to expand Bundaberg’s healthcare precinct.',
   },
   {
     id: 3,
     title: '39 Scenery Street, West Gladstone',
-    category: 'Multiple Level',
+    category: 'Commercial',
     location: 'West Gladstone, QLD',
     year: '2013',
-    image: '/images/scenerystreet.jpg', // update to your actual filename
+    image: '/images/scenerystreet.jpg',
     description:
       'A contemporary multi-level townhouse development maximising an elevated site with outlooks over West Gladstone.',
   },
 
-  // PRESTIGE HOMES
+  // PREMIUM HOMES
   {
     id: 4,
     title: '11 John Francis Drive, Carrara',
-    category: 'Prestige Homes',
+    category: 'Premium Homes',
     location: 'Carrara, Gold Coast, QLD',
     year: '2009',
-    image: '/images/johnfrancisdrive.jpg', // matches your FeaturedProjects
+    image: '/images/johnfrancisdrive.jpg',
     description:
       'Architecturally detailed prestige home with generous indoor–outdoor living and refined finishes throughout.',
   },
   {
     id: 5,
     title: '3 Parkview Terrace, Bundaberg North',
-    category: 'Prestige Homes',
+    category: 'Premium Homes',
     location: 'Bundaberg North, QLD',
-    year: '2021', // currently using sale/likely completion year – adjust if needed
-    image: '/images/parkviewterrace.webp', // update to your actual filename
+    year: '2021',
+    image: '/images/parkviewterrace.webp',
     description:
       'Large family residence on a 2,339m² allotment overlooking the Botanic Gardens, designed for relaxed, premium Bundaberg living.',
   },
@@ -66,8 +67,8 @@ const projects = [
     title: '15 Whitewash Street, Bargara',
     category: 'Residential',
     location: 'Bargara, QLD',
-    year: '2025', // sold 2025 – use exact build year if you prefer
-    image: '/images/whitewashstreet.webp', // matches your FeaturedProjects
+    year: '2025',
+    image: '/images/whitewashstreet.webp',
     description:
       'Modern coastal home in Bargara, combining clean lines, open-plan living and easy access to the beachfront.',
   },
@@ -76,7 +77,7 @@ const projects = [
     title: '5 Remy Court, Avoca',
     category: 'Residential',
     location: 'Avoca, Bundaberg, QLD',
-    year: '2019', // based on sale timing – update to true build year if different
+    year: '2019',
     image: '/images/5remycourt.webp',
     description:
       'Contemporary single-storey home in a quiet Avoca cul-de-sac, designed for low-maintenance family living.',
@@ -86,7 +87,7 @@ const projects = [
     title: '12 Lamond Place, Bargara',
     category: 'Residential',
     location: 'Bargara, QLD',
-    year: '2021', // land sold 2020, house sold 2022 – midpoint as build proxy
+    year: '2021',
     image: '/images/lamondplace.jpg',
     description:
       'Spacious four-bedroom home on a generous block in Bargara, blending coastal lifestyle with suburban comfort.',
@@ -96,9 +97,9 @@ const projects = [
   {
     id: 9,
     title: '1/7 Remy Court, Avoca',
-    category: 'Duplexes',
+    category: 'Duplex',
     location: 'Avoca, Bundaberg, QLD',
-    year: '2023', // sold 2023 – update if you know the exact construction year
+    year: '2023',
     image: '/images/remy court.jpg',
     description:
       'High-quality duplex residence with three bedrooms, double bathrooms and generous parking, finished to a premium investment standard.',
@@ -109,9 +110,10 @@ export default function Projects() {
   const [activeCategory, setActiveCategory] = useState('All');
   const [hoveredId, setHoveredId] = useState<number | null>(null);
 
-  const filteredProjects = activeCategory === 'All'
-    ? projects
-    : projects.filter(p => p.category === activeCategory);
+  const filteredProjects =
+    activeCategory === 'All'
+      ? projects
+      : projects.filter((p) => p.category === activeCategory);
 
   return (
     <div>
@@ -165,9 +167,13 @@ export default function Projects() {
                 onClick={() => setActiveCategory(category)}
                 className="px-6 py-3 text-sm font-semibold uppercase tracking-wider transition-all duration-300"
                 style={{
-                  backgroundColor: activeCategory === category ? '#0071BC' : 'transparent',
-                  color: activeCategory === category ? '#FEFEFE' : '#5A5A5A',
-                  border: `2px solid ${activeCategory === category ? '#0071BC' : '#CCCCCC'}`,
+                  backgroundColor:
+                    activeCategory === category ? '#0071BC' : 'transparent',
+                  color:
+                    activeCategory === category ? '#FEFEFE' : '#5A5A5A',
+                  border: `2px solid ${
+                    activeCategory === category ? '#0071BC' : '#CCCCCC'
+                  }`,
                 }}
               >
                 {category}
@@ -188,7 +194,10 @@ export default function Projects() {
                   onMouseEnter={() => setHoveredId(project.id)}
                   onMouseLeave={() => setHoveredId(null)}
                 >
-                  <div className="relative overflow-hidden mb-6" style={{ aspectRatio: '4/3' }}>
+                  <div
+                    className="relative overflow-hidden mb-6"
+                    style={{ aspectRatio: '4/3' }}
+                  >
                     <img
                       src={project.image}
                       alt={project.title}
@@ -198,14 +207,18 @@ export default function Projects() {
                     <div
                       className="absolute inset-0 transition-opacity duration-500"
                       style={{
-                        background: 'linear-gradient(to top, rgba(34, 31, 32, 0.6) 0%, transparent 50%)'
+                        background:
+                          'linear-gradient(to top, rgba(34, 31, 32, 0.6) 0%, transparent 50%)',
                       }}
                     />
 
                     <div
-                      className={`absolute inset-0 transition-opacity duration-500 ${hoveredId === project.id ? 'opacity-100' : 'opacity-0'}`}
+                      className={`absolute inset-0 transition-opacity duration-500 ${
+                        hoveredId === project.id ? 'opacity-100' : 'opacity-0'
+                      }`}
                       style={{
-                        background: 'linear-gradient(135deg, rgba(0, 113, 188, 0.9), rgba(0, 162, 232, 0.9), rgba(41, 171, 226, 0.9))'
+                        background:
+                          'linear-gradient(135deg, rgba(0, 113, 188, 0.9), rgba(0, 162, 232, 0.9), rgba(41, 171, 226, 0.9))',
                       }}
                     />
 
@@ -219,7 +232,13 @@ export default function Projects() {
                       {project.category}
                     </div>
 
-                    <div className={`absolute top-4 right-4 transition-all duration-500 ${hoveredId === project.id ? 'opacity-100 translate-x-0' : 'opacity-0 translate-x-4'}`}>
+                    <div
+                      className={`absolute top-4 right-4 transition-all duration-500 ${
+                        hoveredId === project.id
+                          ? 'opacity-100 translate-x-0'
+                          : 'opacity-0 translate-x-4'
+                      }`}
+                    >
                       <div
                         className="w-10 h-10 flex items-center justify-center"
                         style={{ backgroundColor: '#FEFEFE' }}
@@ -228,7 +247,13 @@ export default function Projects() {
                       </div>
                     </div>
 
-                    <div className={`absolute inset-x-0 bottom-0 p-6 transition-all duration-500 ${hoveredId === project.id ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'}`}>
+                    <div
+                      className={`absolute inset-x-0 bottom-0 p-6 transition-all duration-500 ${
+                        hoveredId === project.id
+                          ? 'opacity-100 translate-y-0'
+                          : 'opacity-0 translate-y-4'
+                      }`}
+                    >
                       <p
                         className="text-sm leading-relaxed"
                         style={{ color: '#FEFEFE' }}
@@ -241,11 +266,17 @@ export default function Projects() {
                   <div>
                     <h3
                       className="text-xl font-bold mb-3 transition-colors duration-300"
-                      style={{ color: hoveredId === project.id ? '#0071BC' : '#221F20' }}
+                      style={{
+                        color:
+                          hoveredId === project.id ? '#0071BC' : '#221F20',
+                      }}
                     >
                       {project.title}
                     </h3>
-                    <div className="flex items-center space-x-4 text-sm" style={{ color: '#666666' }}>
+                    <div
+                      className="flex items-center space-x-4 text-sm"
+                      style={{ color: '#666666' }}
+                    >
                       <span className="flex items-center space-x-1">
                         <MapPin size={14} style={{ color: '#0071BC' }} />
                         <span>{project.location}</span>
