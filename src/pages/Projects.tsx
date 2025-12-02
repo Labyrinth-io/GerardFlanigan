@@ -55,7 +55,7 @@ const projects = [
     category: 'Prestige Homes',
     location: 'Bundaberg North, QLD',
     year: '2021', // currently using sale/likely completion year – adjust if needed
-    image: '/images/parkview-terrace.jpg', // update to your actual filename
+    image: '/images/parkviewterrace.webp', // update to your actual filename
     description:
       'Large family residence on a 2,339m² allotment overlooking the Botanic Gardens, designed for relaxed, premium Bundaberg living.',
   },
