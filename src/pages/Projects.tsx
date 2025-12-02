@@ -6,77 +6,102 @@ import CTAStrip from '../components/CTAStrip';
 const categories = ['All', 'Commercial', 'Premium Homes', 'Duplexes', 'Renovations'];
 
 const projects = [
+  // MULTIPLE LEVEL PROJECTS
   {
     id: 1,
-    title: 'Harbourview Commercial Complex',
-    category: 'Commercial',
-    location: 'Bundaberg CBD',
-    year: '2024',
-    image: 'https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=800&q=80',
-    description: 'A landmark 12-storey commercial development featuring premium office spaces and ground-floor retail.',
+    title: '1 Bayne Street, West Gladstone',
+    category: 'Multiple Level',
+    location: 'West Gladstone, QLD',
+    year: '2014', // building completed approx. 2014
+    image: '/images/bayne-street.jpg', // update to your actual filename
+    description:
+      'Multi-level apartment complex in West Gladstone, delivering modern, low-maintenance living close to the CBD.',
   },
   {
     id: 2,
-    title: 'Mosman Luxury Residence',
-    category: 'Premium Homes',
-    location: 'Mosman, NSW',
-    year: '2024',
-    image: 'https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=800&q=80',
-    description: 'An architectural masterpiece featuring harbour views, infinity pool, and smart home integration.',
+    title: 'Friendlies Medical Suites, Bundaberg',
+    category: 'Multiple Level',
+    location: 'Bundaberg West, QLD',
+    year: '2015',
+    image: '/images/Friendlies.jpg', // matches your FeaturedProjects
+    description:
+      'Purpose-built specialist medical suites constructed behind the Friendly Society Private Hospital to expand Bundaberg’s healthcare precinct.',
   },
   {
     id: 3,
-    title: 'Bondi Beach Duplex',
-    category: 'Duplexes',
-    location: 'Bondi Beach, NSW',
-    year: '2023',
-    image: 'https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=800&q=80',
-    description: 'Modern dual-occupancy development maximizing beachside location with premium finishes.',
+    title: '39 Scenery Street, West Gladstone',
+    category: 'Multiple Level',
+    location: 'West Gladstone, QLD',
+    year: '2013',
+    image: '/images/scenery-street.jpg', // update to your actual filename
+    description:
+      'A contemporary multi-level townhouse development maximising an elevated site with outlooks over West Gladstone.',
   },
+
+  // PRESTIGE HOMES
   {
     id: 4,
-    title: 'Heritage Home Renovation',
-    category: 'Renovations',
-    location: 'Paddington, NSW',
-    year: '2023',
-    image: 'https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=800&q=80',
-    description: 'Sympathetic restoration of a Victorian terrace with contemporary additions.',
+    title: '11 John Francis Drive, Carrara',
+    category: 'Prestige Homes',
+    location: 'Carrara, Gold Coast, QLD',
+    year: '2009',
+    image: '/images/johnfrancisdrive.jpg', // matches your FeaturedProjects
+    description:
+      'Architecturally detailed prestige home with generous indoor–outdoor living and refined finishes throughout.',
   },
   {
     id: 5,
-    title: 'North Bundaberg Office Tower',
-    category: 'Commercial',
-    location: 'North Bundaberg, QLD',
-    year: '2023',
-    image: 'https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?w=800&q=80',
-    description: 'Premium Grade A office space with sustainable design and city views.',
+    title: '3 Parkview Terrace, Bundaberg North',
+    category: 'Prestige Homes',
+    location: 'Bundaberg North, QLD',
+    year: '2021', // currently using sale/likely completion year – adjust if needed
+    image: '/images/parkview-terrace.jpg', // update to your actual filename
+    description:
+      'Large family residence on a 2,339m² allotment overlooking the Botanic Gardens, designed for relaxed, premium Bundaberg living.',
   },
+
+  // RESIDENTIAL
   {
     id: 6,
-    title: 'Vaucluse Family Estate',
-    category: 'Premium Homes',
-    location: 'Vaucluse, NSW',
-    year: '2023',
-    image: 'https://images.unsplash.com/photo-1613490493576-7fde63acd811?w=800&q=80',
-    description: 'Five-bedroom luxury estate with landscaped gardens and tennis court.',
+    title: '15 Whitewash Street, Bargara',
+    category: 'Residential',
+    location: 'Bargara, QLD',
+    year: '2025', // sold 2025 – use exact build year if you prefer
+    image: '/images/whitewashstreet.webp', // matches your FeaturedProjects
+    description:
+      'Modern coastal home in Bargara, combining clean lines, open-plan living and easy access to the beachfront.',
   },
   {
     id: 7,
-    title: 'Coogee Townhouse Development',
-    category: 'Duplexes',
-    location: 'Coogee, NSW',
-    year: '2022',
-    image: 'https://images.unsplash.com/photo-1580587771525-78b9dba3b914?w=800&q=80',
-    description: 'Three luxury townhouses with rooftop terraces and ocean glimpses.',
+    title: '5 Remy Court, Avoca',
+    category: 'Residential',
+    location: 'Avoca, Bundaberg, QLD',
+    year: '2019', // based on sale timing – update to true build year if different
+    image: '/images/remy-court-5.jpg', // update to your actual filename
+    description:
+      'Contemporary single-storey home in a quiet Avoca cul-de-sac, designed for low-maintenance family living.',
   },
   {
     id: 8,
-    title: 'Surry Hills Terrace Transformation',
-    category: 'Renovations',
-    location: 'Surry Hills, NSW',
-    year: '2022',
-    image: 'https://images.unsplash.com/photo-1558036117-15d82a90b9b1?w=800&q=80',
-    description: 'Complete renovation of inner-city terrace with rear extension.',
+    title: '12 Lamond Place, Bargara',
+    category: 'Residential',
+    location: 'Bargara, QLD',
+    year: '2021', // land sold 2020, house sold 2022 – midpoint as build proxy
+    image: '/images/lamond-place.jpg', // update to your actual filename
+    description:
+      'Spacious four-bedroom home on a generous block in Bargara, blending coastal lifestyle with suburban comfort.',
+  },
+
+  // DUPLEX
+  {
+    id: 9,
+    title: '1/7 Remy Court, Avoca',
+    category: 'Duplexes',
+    location: 'Avoca, Bundaberg, QLD',
+    year: '2023', // sold 2023 – update if you know the exact construction year
+    image: '/images/remy-court.jpg', // matches your FeaturedProjects naming
+    description:
+      'High-quality duplex residence with three bedrooms, double bathrooms and generous parking, finished to a premium investment standard.',
   },
 ];
 
