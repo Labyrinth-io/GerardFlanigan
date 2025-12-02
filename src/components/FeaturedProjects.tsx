@@ -14,7 +14,7 @@ const projects = [
   },
   {
     id: 2,
-    title: 'John Francis Drive',
+    title: '11 John Francis Drive',
     category: 'Premium Home',
     image: 'public/images/johnfrancisdrive.jpg',
     location: 'Carrara, Gold Coast',
