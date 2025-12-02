@@ -99,7 +99,7 @@ const projects = [
     category: 'Duplexes',
     location: 'Avoca, Bundaberg, QLD',
     year: '2023', // sold 2023 – update if you know the exact construction year
-    image: '/images/remy-court.jpg', // matches your FeaturedProjects naming
+    image: '/images/remy court.jpg',
     description:
       'High-quality duplex residence with three bedrooms, double bathrooms and generous parking, finished to a premium investment standard.',
   },
