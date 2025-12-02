@@ -24,14 +24,14 @@ const projects = [
     title: '1/7 Remy Court',
     category: 'Duplex',
     image: '/images/remy court.jpg',
-    location: 'Avoca',
+    location: 'Avoca, Bundaberg',
   },
   {
     id: 4,
     title: '15 Whitewash Street',
     category: 'Residential',
     image: 'public/images/whitewashstreet.webp',
-    location: 'Paddington, NSW',
+    location: 'Bargara',
   },
 ];
 
