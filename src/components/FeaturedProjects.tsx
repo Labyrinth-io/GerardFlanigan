@@ -23,7 +23,7 @@ const projects = [
     id: 3,
     title: 'Bondi Beach Duplex',
     category: 'Duplex',
-    image: 'https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=800&q=80',
+    image: '/images/remy court.jpg',
     location: 'Bondi Beach, NSW',
   },
   {
