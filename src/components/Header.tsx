@@ -32,18 +32,15 @@ export default function Header() {
       style={{ backgroundColor: '#221F20' }}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        {/* MAIN DESKTOP ROW */}
-        <div className="flex items-center h-20 gap-6">
-          {/* Logo + wordmark */}
-          <Link
-            to={createPageUrl('Home')}
-            className="flex items-center gap-3 flex-shrink-0"
-          >
+        <div className="flex items-center justify-between h-20">
+          {/* LOGO BLOCK */}
+          <Link to={createPageUrl('Home')} className="flex items-center gap-3">
             <img
               src="/Gerard Logo copy.svg"
               alt="Gerard Flanigan Logo"
               className="h-12 w-12 sm:h-14 sm:w-14"
             />
+
             <div className="flex flex-col leading-tight">
               <span
                 className="text-xl sm:text-2xl font-bold tracking-wide"
@@ -51,11 +48,13 @@ export default function Header() {
               >
                 GERARD FLANIGAN
               </span>
+
+              {/* SUBTITLE WITH BOTH DESKTOP + MOBILE CONTROL */}
               <span
                 className="uppercase"
                 style={{
                   color: '#29ABE2',
-                  letterSpacing: '1.28em', // <- your tuned value
+                  letterSpacing: '1.28em',   // DESKTOP PERFECT SETTING
                   fontSize: '0.6rem',
                   lineHeight: '1rem',
                   transform: 'translateY(1px)',
@@ -65,17 +64,26 @@ export default function Header() {
                 }}
               >
                 CONSTRUCTIONS
+                <style>{`
+                  @media (max-width: 640px) {
+                    header span[style] {
+                      letter-spacing: 0.9em !important;    /* MOBILE FIX */
+                      font-size: 0.52rem !important;       /* MOBILE FIX */
+                      transform: translateY(0px) !important;
+                    }
+                  }
+                `}</style>
               </span>
             </div>
           </Link>
 
-          {/* Nav in the middle */}
-          <nav className="hidden lg:flex items-center justify-center gap-6 flex-1">
+          {/* DESKTOP NAV */}
+          <nav className="hidden lg:flex items-center space-x-8">
             {navItems.map((item) => (
               <Link
                 key={item.name}
                 to={createPageUrl(item.page)}
-                className="relative text-xs lg:text-sm font-medium tracking-wide uppercase transition-colors duration-200 group"
+                className="relative text-sm font-medium tracking-wide uppercase transition-colors duration-200 group"
                 style={{ color: '#FEFEFE' }}
               >
                 {item.name}
@@ -87,39 +95,33 @@ export default function Header() {
             ))}
           </nav>
 
-          {/* Phone + CTA on the right */}
-          <div className="hidden md:flex items-center gap-4 flex-shrink-0">
+          {/* DESKTOP PHONE + CTA */}
+          <div className="hidden md:flex items-center space-x-6">
             <a
               href="tel:0477037911"
-              className="flex items-center gap-2 transition-colors duration-200"
+              className="flex items-center space-x-2 transition-colors duration-200"
               style={{ color: '#FEFEFE' }}
             >
               <Phone size={18} style={{ color: '#29ABE2' }} />
-              <span className="font-medium text-sm lg:text-base">
-                0477 037 911
-              </span>
+              <span className="font-medium">0477 037 911</span>
             </a>
             <Link
               to={createPageUrl('Contact')}
-              className="px-5 py-2.5 text-xs lg:text-sm font-semibold uppercase tracking-wide transition-all duration-300 hover:scale-105"
+              className="px-6 py-3 text-sm font-semibold uppercase tracking-wide transition-all duration-300 hover:scale-105"
               style={{
                 backgroundColor: '#E67E22',
                 color: '#FEFEFE',
               }}
-              onMouseEnter={(e) =>
-                (e.currentTarget.style.backgroundColor = '#C15427')
-              }
-              onMouseLeave={(e) =>
-                (e.currentTarget.style.backgroundColor = '#E67E22')
-              }
+              onMouseEnter={(e) => (e.currentTarget.style.backgroundColor = '#C15427')}
+              onMouseLeave={(e) => (e.currentTarget.style.backgroundColor = '#E67E22')}
             >
               Request a Quote
             </Link>
           </div>
 
-          {/* Mobile menu button */}
+          {/* MOBILE MENU BUTTON */}
           <button
-            className="lg:hidden p-2 ml-auto"
+            className="lg:hidden p-2"
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
             style={{ color: '#FEFEFE' }}
           >
@@ -127,7 +129,7 @@ export default function Header() {
           </button>
         </div>
 
-        {/* MOBILE MENU DROPDOWN */}
+        {/* MOBILE MENU */}
         <div
           className={`lg:hidden overflow-hidden transition-all duration-300 ${
             mobileMenuOpen ? 'max-h-96 pb-6' : 'max-h-0'
@@ -147,7 +149,7 @@ export default function Header() {
             ))}
             <a
               href="tel:0477037911"
-              className="flex items-center gap-2 py-2"
+              className="flex items-center space-x-2 py-2"
               style={{ color: '#FEFEFE' }}
             >
               <Phone size={18} style={{ color: '#29ABE2' }} />
