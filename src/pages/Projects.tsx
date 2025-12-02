@@ -17,13 +17,17 @@ const projects = [
   },
   {
     id: 2,
-    title: 'Mosman Luxury Residence',
+    title: '11 John Francis Drive',
     category: 'Premium Homes',
-    location: 'Mosman, NSW',
-    year: '2024',
-    image: 'https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=800&q=80',
+    location: 'Carrara, Gold Coast',
+    year: '2009',
+    image: 'public/images/johnfrancisdrive.jpg',
     description: 'An architectural masterpiece featuring harbour views, infinity pool, and smart home integration.',
   },
+  title: '11 John Francis Drive',
+    category: 'Premium Home',
+    image: 'public/images/johnfrancisdrive.jpg',
+    location: 'Carrara, Gold Coast'
   {
     id: 3,
     title: 'Bondi Beach Duplex',
@@ -42,6 +46,7 @@ const projects = [
     image: 'https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=800&q=80',
     description: 'Sympathetic restoration of a Victorian terrace with contemporary additions.',
   },
+  Bargara
   {
     id: 5,
     title: 'North Bundaberg Office Tower',
