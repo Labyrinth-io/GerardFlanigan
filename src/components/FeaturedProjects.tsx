@@ -17,7 +17,7 @@ const projects = [
     title: 'John Francis Drive',
     category: 'Premium Home',
     image: 'public/images/johnfrancisdrive.jpg',
-    location: 'Mosman, NSW',
+    location: 'Carrara, Gold Coast',
   },
   {
     id: 3,
