@@ -52,7 +52,7 @@ export default function Header() {
                 className="uppercase"
                 style={{
                   color: '#29ABE2',
-                  letterSpacing: '0.65em', 
+                  letterSpacing: '0.65em',
                   fontSize: '0.6rem',
                   lineHeight: '1rem',
                   transform: 'translateY(1px)',
