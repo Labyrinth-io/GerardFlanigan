@@ -59,8 +59,8 @@ export default function Header() {
                 className="uppercase inline-block sm:hidden"
                 style={{
                   color: '#29ABE2',
-                  letterSpacing: '1em',   // 👈 MOBILE width
-                  fontSize: '0.52rem',      // 👈 MOBILE size
+                  letterSpacing: '1em',   // MOBILE width
+                  fontSize: '0.52rem',    // MOBILE size
                   lineHeight: '1rem',
                   transform: 'translateY(0px)',
                   whiteSpace: 'nowrap',
@@ -75,8 +75,8 @@ export default function Header() {
                 className="uppercase hidden sm:inline-block"
                 style={{
                   color: '#29ABE2',
-                  letterSpacing: '1.28em',  // 👈 DESKTOP width
-                  fontSize: '0.6rem',       // 👈 DESKTOP size
+                  letterSpacing: '1.28em', // DESKTOP width
+                  fontSize: '0.6rem',      // DESKTOP size
                   lineHeight: '1rem',
                   transform: 'translateY(1px)',
                   whiteSpace: 'nowrap',
@@ -106,18 +106,18 @@ export default function Header() {
             ))}
           </nav>
 
-          {/* Phone + CTA (desktop) */}
+          {/* Phone icon + CTA (desktop) */}
           <div className="hidden md:flex items-center gap-4 flex-shrink-0">
+            {/* Icon only, still clickable tel link */}
             <a
               href="tel:0477037911"
-              className="flex items-center gap-2 transition-colors duration-200"
+              className="flex items-center transition-colors duration-200"
               style={{ color: '#FEFEFE' }}
+              aria-label="Call Gerard on 0477 037 911"
             >
-              <Phone size={18} style={{ color: '#29ABE2' }} />
-              <span className="font-medium text-sm lg:text-base">
-                0477 037 911
-              </span>
+              <Phone size={20} style={{ color: '#29ABE2' }} />
             </a>
+
             <Link
               to={createPageUrl('Contact')}
               className="px-5 py-2.5 text-xs lg:text-sm font-semibold uppercase tracking-wide transition-all duration-300 hover:scale-105"
@@ -165,6 +165,7 @@ export default function Header() {
               </Link>
             ))}
 
+            {/* MOBILE: keep icon + number */}
             <a
               href="tel:0477037911"
               className="flex items-center gap-2 py-2"
