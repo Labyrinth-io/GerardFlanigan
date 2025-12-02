@@ -4,7 +4,7 @@ import { ArrowUpRight, MapPin, Calendar } from 'lucide-react';
 import CTAStrip from '../components/CTAStrip';
 
 const categories = ['All', 'Commercial', 'Premium Homes', 'Duplexes', 'Renovations'];
- 
+
 const projects = [
   {
     id: 1,
