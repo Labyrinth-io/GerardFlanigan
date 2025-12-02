@@ -13,7 +13,7 @@ const projects = [
     category: 'Multiple Level',
     location: 'West Gladstone, QLD',
     year: '2014', // building completed approx. 2014
-    image: '/images/bayne-street.jpg', // update to your actual filename
+    image: '/images/baynestreet.webp', // update to your actual filename
     description:
       'Multi-level apartment complex in West Gladstone, delivering modern, low-maintenance living close to the CBD.',
   },
@@ -33,7 +33,7 @@ const projects = [
     category: 'Multiple Level',
     location: 'West Gladstone, QLD',
     year: '2013',
-    image: '/images/scenery-street.jpg', // update to your actual filename
+    image: '/images/scenerystreet.jpg', // update to your actual filename
     description:
       'A contemporary multi-level townhouse development maximising an elevated site with outlooks over West Gladstone.',
   },
