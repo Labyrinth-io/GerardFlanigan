@@ -14,7 +14,7 @@ const projects = [
   },
   {
     id: 2,
-    title: '12 Lamond Place',
+    title: 'John Francis Drive',
     category: 'Premium Home',
     image: 'public/images/johnfrancisdrive.jpg',
     location: 'Mosman, NSW',
