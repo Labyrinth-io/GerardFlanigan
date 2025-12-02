@@ -31,7 +31,7 @@ export default function Footer() {
                 className="uppercase inline-block sm:hidden"
                 style={{
                   color: '#29ABE2',
-                  letterSpacing: '1em',   // 👈 MOBILE width
+                  letterSpacing: '1.2em',   // 👈 MOBILE width
                   fontSize: '0.52rem',      // 👈 MOBILE size
                   lineHeight: '1rem',
                   transform: 'translateY(0px)',
