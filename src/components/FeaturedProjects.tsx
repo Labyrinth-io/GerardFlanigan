@@ -14,9 +14,9 @@ const projects = [
   },
   {
     id: 2,
-    title: 'Mosman Luxury Residence',
+    title: '12 Lamond Place',
     category: 'Premium Home',
-    image: 'https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=800&q=80',
+    image: 'public/images/lamondplace.jpg',
     location: 'Mosman, NSW',
   },
   {
