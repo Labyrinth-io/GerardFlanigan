@@ -6,7 +6,7 @@ import { CheckCircle2, Award, Users, Clock, ArrowRight } from 'lucide-react';
 import CTAStrip from '../components/CTAStrip';
 
 const stats = [
-  { number: '25+', label: 'Years Experience' },
+  { number: '30+', label: 'Years Experience' },
   { number: '500+', label: 'Projects Completed' },
   { number: '100%', label: 'Client Satisfaction' },
   { number: '50+', label: 'Industry Awards' },
