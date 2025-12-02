@@ -17,25 +17,54 @@ export default function Footer() {
                 alt="Gerard Flanigan Logo"
                 className="h-16 w-16 mb-4"
               />
+
+              {/* BUSINESS NAME */}
               <span
                 className="text-xl sm:text-2xl font-bold tracking-wide"
                 style={{ color: '#FEFEFE', fontFamily: 'system-ui' }}
               >
                 GERARD FLANIGAN
               </span>
+
+              {/* MOBILE "CONSTRUCTIONS" (ONLY below sm) */}
               <span
-                className="text-xs sm:text-sm uppercase"
+                className="uppercase inline-block sm:hidden"
                 style={{
                   color: '#29ABE2',
-                  letterSpacing: '0.85em'
+                  letterSpacing: '0.9em',   // 👈 MOBILE width
+                  fontSize: '0.52rem',      // 👈 MOBILE size
+                  lineHeight: '1rem',
+                  transform: 'translateY(0px)',
+                  whiteSpace: 'nowrap',
+                  maxWidth: '100%',
+                }}
+              >
+                CONSTRUCTIONS
+              </span>
+
+              {/* DESKTOP "CONSTRUCTIONS" (ONLY sm and up) */}
+              <span
+                className="uppercase hidden sm:inline-block"
+                style={{
+                  color: '#29ABE2',
+                  letterSpacing: '1.28em',  // 👈 DESKTOP width
+                  fontSize: '0.6rem',       // 👈 DESKTOP size
+                  lineHeight: '1rem',
+                  transform: 'translateY(1px)',
+                  whiteSpace: 'nowrap',
+                  maxWidth: '100%',
                 }}
               >
                 CONSTRUCTIONS
               </span>
             </div>
-            <p style={{ color: '#B8B8B8' }} className="text-sm leading-relaxed">
-              Building excellence across Bundaberg for over 25 years. Commercial projects,
-              premium homes, and quality renovations.
+
+            <p
+              style={{ color: '#B8B8B8' }}
+              className="text-sm leading-relaxed"
+            >
+              Building excellence across Bundaberg for over 25 years. Commercial
+              projects, premium homes, and quality renovations.
             </p>
             <div
               className="w-16 h-0.5"
@@ -51,19 +80,25 @@ export default function Footer() {
               Quick Links
             </h4>
             <ul className="space-y-3">
-              {['Home', 'About', 'Services', 'Projects', 'Testimonials', 'Contact'].map((item) => (
-                <li key={item}>
-                  <Link
-                    to={createPageUrl(item)}
-                    className="text-sm transition-colors duration-200 hover:pl-2"
-                    style={{ color: '#B8B8B8' }}
-                    onMouseEnter={(e) => (e.currentTarget.style.color = '#29ABE2')}
-                    onMouseLeave={(e) => (e.currentTarget.style.color = '#B8B8B8')}
-                  >
-                    {item}
-                  </Link>
-                </li>
-              ))}
+              {['Home', 'About', 'Services', 'Projects', 'Testimonials', 'Contact'].map(
+                (item) => (
+                  <li key={item}>
+                    <Link
+                      to={createPageUrl(item)}
+                      className="text-sm transition-colors duration-200 hover:pl-2"
+                      style={{ color: '#B8B8B8' }}
+                      onMouseEnter={(e) =>
+                        (e.currentTarget.style.color = '#29ABE2')
+                      }
+                      onMouseLeave={(e) =>
+                        (e.currentTarget.style.color = '#B8B8B8')
+                      }
+                    >
+                      {item}
+                    </Link>
+                  </li>
+                )
+              )}
             </ul>
           </div>
 
@@ -81,13 +116,10 @@ export default function Footer() {
                 'Premium Homes',
                 'Duplexes',
                 'Renovations',
-                'Extensions'
+                'Extensions',
               ].map((service) => (
                 <li key={service}>
-                  <span
-                    className="text-sm"
-                    style={{ color: '#B8B8B8' }}
-                  >
+                  <span className="text-sm" style={{ color: '#B8B8B8' }}>
                     {service}
                   </span>
                 </li>
@@ -119,7 +151,7 @@ export default function Footer() {
               </li>
               <li>
                 <a
-                  href="mailto:info@gerardflanigan.com.au"
+                  href="mailto:gflaniganbuilder@gmail.com"
                   className="flex items-center space-x-3"
                 >
                   <Mail size={18} style={{ color: '#29ABE2' }} />
@@ -127,17 +159,19 @@ export default function Footer() {
                     className="text-sm transition-colors duration-200"
                     style={{ color: '#B8B8B8' }}
                   >
-                    info@gerardflanigan.com.au
+                    gflaniganbuilder@gmail.com
                   </span>
                 </a>
               </li>
               <li className="flex items-start space-x-3">
-                <MapPin size={18} style={{ color: '#29ABE2' }} className="mt-0.5" />
-                <span
-                  className="text-sm"
-                  style={{ color: '#B8B8B8' }}
-                >
-                  Bundaberg, QLD<br />Australia
+                <MapPin
+                  size={18}
+                  style={{ color: '#29ABE2' }}
+                  className="mt-0.5"
+                />
+                <span className="text-sm" style={{ color: '#B8B8B8' }}>
+                  12 Churchill Street<br />
+                  Svensson Heights, Bundaberg QLD
                 </span>
               </li>
             </ul>
@@ -145,22 +179,13 @@ export default function Footer() {
         </div>
       </div>
 
-      <div
-        className="border-t"
-        style={{ borderColor: '#5A5A5A' }}
-      >
+      <div className="border-t" style={{ borderColor: '#5A5A5A' }}>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
           <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
-            <p
-              className="text-sm"
-              style={{ color: '#666666' }}
-            >
+            <p className="text-sm" style={{ color: '#666666' }}>
               © {currentYear} Gerard Flanigan Builder. All rights reserved.
             </p>
-            <p
-              className="text-sm"
-              style={{ color: '#666666' }}
-            >
+            <p className="text-sm" style={{ color: '#666666' }}>
               Licensed Builder | NSW Licence #123456C
             </p>
           </div>
