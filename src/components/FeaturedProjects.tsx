@@ -29,8 +29,8 @@ const projects = [
   {
     id: 4,
     title: 'Heritage Home Renovation',
-    category: 'Renovation',
-    image: 'https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=800&q=80',
+    category: 'Residential',
+    image: 'public/images/whitewashstreet.webp',
     location: 'Paddington, NSW',
   },
 ];
