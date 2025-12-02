@@ -11,7 +11,7 @@ const projects = [
     category: 'Commercial',
     image: 'https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=800&q=80',
     location: 'Bundaberg CBD',
-  }, 
+  },
   {
     id: 2,
     title: 'Mosman Luxury Residence',
