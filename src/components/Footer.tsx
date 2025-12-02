@@ -138,12 +138,18 @@ export default function Footer() {
               <li>
                 <a
                   href="tel:0477037911"
-                  className="flex items-center space-x-3 group"
+                  className="flex items-center space-x-3 transition-all duration-200 hover:pl-2"
                 >
                   <Phone size={18} style={{ color: '#29ABE2' }} />
                   <span
                     className="text-sm transition-colors duration-200"
                     style={{ color: '#B8B8B8' }}
+                    onMouseEnter={(e) =>
+                      (e.currentTarget.style.color = '#29ABE2')
+                    }
+                    onMouseLeave={(e) =>
+                      (e.currentTarget.style.color = '#B8B8B8')
+                    }
                   >
                     0477 037 911
                   </span>
@@ -152,27 +158,49 @@ export default function Footer() {
               <li>
                 <a
                   href="mailto:gflaniganbuilder@gmail.com"
-                  className="flex items-center space-x-3"
+                  className="flex items-center space-x-3 transition-all duration-200 hover:pl-2"
                 >
                   <Mail size={18} style={{ color: '#29ABE2' }} />
                   <span
                     className="text-sm transition-colors duration-200"
                     style={{ color: '#B8B8B8' }}
+                    onMouseEnter={(e) =>
+                      (e.currentTarget.style.color = '#29ABE2')
+                    }
+                    onMouseLeave={(e) =>
+                      (e.currentTarget.style.color = '#B8B8B8')
+                    }
                   >
                     gflaniganbuilder@gmail.com
                   </span>
                 </a>
               </li>
-              <li className="flex items-start space-x-3">
-                <MapPin
-                  size={18}
-                  style={{ color: '#29ABE2' }}
-                  className="mt-0.5"
-                />
-                <span className="text-sm" style={{ color: '#B8B8B8' }}>
-                  12 Churchill Street<br />
-                  Svensson Heights, Bundaberg QLD
-                </span>
+              <li>
+                <a
+                  href="https://maps.app.goo.gl/URAsRQPe2gwKQDZd9"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-start space-x-3 transition-all duration-200 hover:pl-2"
+                >
+                  <MapPin
+                    size={18}
+                    style={{ color: '#29ABE2' }}
+                    className="mt-0.5"
+                  />
+                  <span
+                    className="text-sm transition-colors duration-200"
+                    style={{ color: '#B8B8B8' }}
+                    onMouseEnter={(e) =>
+                      (e.currentTarget.style.color = '#29ABE2')
+                    }
+                    onMouseLeave={(e) =>
+                      (e.currentTarget.style.color = '#B8B8B8')
+                    }
+                  >
+                    12 Churchill Street<br />
+                    Svensson Heights, Bundaberg QLD
+                  </span>
+                </a>
               </li>
             </ul>
           </div>
