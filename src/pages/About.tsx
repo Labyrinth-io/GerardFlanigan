@@ -54,7 +54,7 @@ export default function About() {
               className="text-4xl sm:text-5xl md:text-6xl font-bold mb-6"
               style={{ color: '#FEFEFE' }}
             >
-              Building Excellence Since 1998
+              Building Excellence Since 1990
             </motion.h1>
             <motion.div
               initial={{ scaleX: 0 }}
