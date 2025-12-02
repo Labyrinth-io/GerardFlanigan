@@ -11,7 +11,12 @@ export default function Footer() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
           <div className="space-y-6">
-            <div>
+            <div className="flex flex-col items-start">
+              <img
+                src="/Gerard Logo copy.svg"
+                alt="Gerard Flanigan Logo"
+                className="h-16 w-16 mb-4"
+              />
               <span
                 className="text-2xl font-bold tracking-wide block"
                 style={{ color: '#FEFEFE' }}
@@ -19,10 +24,13 @@ export default function Footer() {
                 GERARD FLANIGAN
               </span>
               <span
-                className="text-sm tracking-[0.3em] uppercase"
-                style={{ color: '#29ABE2' }}
+                className="text-sm uppercase"
+                style={{
+                  color: '#29ABE2',
+                  letterSpacing: '0.85em'
+                }}
               >
-                Builder
+                CONSTRUCTIONS
               </span>
             </div>
             <p style={{ color: '#B8B8B8' }} className="text-sm leading-relaxed">

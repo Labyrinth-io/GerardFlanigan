@@ -33,7 +33,12 @@ export default function Header() {
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-20">
-          <Link to={createPageUrl('Home')} className="flex items-center">
+          <Link to={createPageUrl('Home')} className="flex items-center gap-3">
+            <img
+              src="/Gerard Logo copy.svg"
+              alt="Gerard Flanigan Logo"
+              className="h-12 w-12 sm:h-14 sm:w-14"
+            />
             <div className="flex flex-col">
               <span
                 className="text-xl sm:text-2xl font-bold tracking-wide"
@@ -42,10 +47,13 @@ export default function Header() {
                 GERARD FLANIGAN
               </span>
               <span
-                className="text-xs sm:text-sm tracking-[0.3em] uppercase"
-                style={{ color: '#29ABE2' }}
+                className="text-xs sm:text-sm uppercase"
+                style={{
+                  color: '#29ABE2',
+                  letterSpacing: '0.85em'
+                }}
               >
-                Builder
+                CONSTRUCTIONS
               </span>
             </div>
           </Link>
