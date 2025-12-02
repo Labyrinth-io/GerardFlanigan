@@ -59,7 +59,7 @@ export default function Header() {
                 className="uppercase inline-block sm:hidden"
                 style={{
                   color: '#29ABE2',
-                  letterSpacing: '0.9em',   // 👈 MOBILE width
+                  letterSpacing: '1em',   // 👈 MOBILE width
                   fontSize: '0.52rem',      // 👈 MOBILE size
                   lineHeight: '1rem',
                   transform: 'translateY(0px)',
