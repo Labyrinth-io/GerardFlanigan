@@ -10,7 +10,8 @@ export default function Hero() {
       <div
         className="absolute inset-0 bg-cover bg-center bg-no-repeat"
         style={{
-          backgroundImage: `url('https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=1920&q=80')`,
+          backgroundImage:
+            "url('https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=1920&q=80')",
         }}
       >
         <div
@@ -28,7 +29,7 @@ export default function Hero() {
             className="text-sm sm:text-base uppercase tracking-[0.3em] mb-6"
             style={{ color: '#B8B8B8' }}
           >
-            Bundaberg's Trusted Builder Since 1998
+            Bundaberg&apos;s Trusted Builder Since 1998
           </motion.p>
 
           <motion.h1
@@ -38,7 +39,8 @@ export default function Hero() {
             className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold leading-tight mb-8"
             style={{ color: '#FEFEFE', fontFamily: 'system-ui' }}
           >
-            QUALITY<br />
+            QUALITY
+            <br />
             <span style={{ color: '#00A2E8' }}>BUILT ON REPUTATION</span>
           </motion.h1>
 
@@ -50,8 +52,8 @@ export default function Hero() {
             style={{ color: '#E6E6E6' }}
           >
             From premium residential homes to complex commercial developments,
-            we deliver exceptional craftsmanship with unwavering attention to detail.
-            Your vision, built with precision.
+            we deliver exceptional craftsmanship with unwavering attention to
+            detail. Your vision, built with precision.
           </motion.p>
 
           <motion.div
@@ -64,7 +66,8 @@ export default function Hero() {
               to={createPageUrl('Projects')}
               className="inline-flex items-center justify-center px-8 py-4 text-sm font-semibold uppercase tracking-wider transition-all duration-300 hover:scale-105"
               style={{
-                background: 'linear-gradient(135deg, #0071BC, #00A2E8, #29ABE2)',
+                background:
+                  'linear-gradient(135deg, #0071BC, #00A2E8, #29ABE2)',
                 color: '#FEFEFE',
               }}
             >
@@ -77,8 +80,12 @@ export default function Hero() {
                 backgroundColor: '#E67E22',
                 color: '#FEFEFE',
               }}
-              onMouseEnter={(e) => (e.currentTarget.style.backgroundColor = '#C15427')}
-              onMouseLeave={(e) => (e.currentTarget.style.backgroundColor = '#E67E22')}
+              onMouseEnter={(e) =>
+                (e.currentTarget.style.backgroundColor = '#C15427')
+              }
+              onMouseLeave={(e) =>
+                (e.currentTarget.style.backgroundColor = '#E67E22')
+              }
             >
               Request a Quote
             </Link>
@@ -105,11 +112,12 @@ export default function Hero() {
         </div>
       </div>
 
+      {/* Scroll indicator: hidden on mobile, visible from sm and up */}
       <motion.div
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ delay: 1, duration: 0.6 }}
-        className="absolute bottom-8 left-1/2 transform -translate-x-1/2"
+        className="hidden sm:block absolute bottom-8 left-1/2 transform -translate-x-1/2"
       >
         <div className="flex flex-col items-center space-y-2">
           <span
@@ -129,4 +137,3 @@ export default function Hero() {
     </section>
   );
 }
- 
