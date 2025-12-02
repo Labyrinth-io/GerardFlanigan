@@ -28,7 +28,7 @@ const projects = [
   },
   {
     id: 4,
-    title: 'Heritage Home Renovation',
+    title: '15 Whitewash Street',
     category: 'Residential',
     image: 'public/images/whitewashstreet.webp',
     location: 'Paddington, NSW',
