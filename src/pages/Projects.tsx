@@ -17,13 +17,17 @@ const projects = [
   },
   {
     id: 2,
-    title: '11 John Francis Drive',
+    title: 'Mosman Luxury Residence', 
     category: 'Premium Homes',
-    location: 'Carrara, Gold Coast',
-    year: '2009',
-    image: 'public/images/johnfrancisdrive.jpg',
+    location: 'Mosman, NSW',
+    year: '2024',
+    image: 'https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=800&q=80',
     description: 'An architectural masterpiece featuring harbour views, infinity pool, and smart home integration.',
   },
+  title: '11 John Francis Drive',
+    category: 'Premium Home',
+    image: 'public/images/johnfrancisdrive.jpg',
+    location: 'Carrara, Gold Coast'
   {
     id: 3,
     title: 'Bondi Beach Duplex',
