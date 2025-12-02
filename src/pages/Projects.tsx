@@ -87,7 +87,7 @@ const projects = [
     category: 'Residential',
     location: 'Bargara, QLD',
     year: '2021', // land sold 2020, house sold 2022 – midpoint as build proxy
-    image: '/images/lamond-place.jpg', // update to your actual filename
+    image: '/images/lamondplace.jpg',
     description:
       'Spacious four-bedroom home on a generous block in Bargara, blending coastal lifestyle with suburban comfort.',
   },
