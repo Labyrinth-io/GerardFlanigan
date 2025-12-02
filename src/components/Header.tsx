@@ -110,13 +110,29 @@ export default function Header() {
           <div className="hidden md:flex items-center gap-4 flex-shrink-0">
             {/* Icon only, still clickable tel link */}
             <a
-              href="tel:0477037911"
-              className="flex items-center transition-colors duration-200"
-              style={{ color: '#FEFEFE' }}
-              aria-label="Call Gerard on 0477 037 911"
-            >
-              <Phone size={20} style={{ color: '#29ABE2' }} />
-            </a>
+  href="tel:0477037911"
+  aria-label="Call Gerard on 0477 037 911"
+  className="group flex items-center transition-all duration-300"
+  style={{ color: '#FEFEFE' }}
+>
+  <Phone
+    size={22}
+    className="transition-all duration-300 group-hover:scale-125"
+    style={{
+      color: '#29ABE2',
+      filter: 'drop-shadow(0 0 0px #29ABE2)',
+    }}
+  />
+
+  {/* Glow effect on hover via inline style override */}
+  <style>
+    {`
+      .group:hover svg {
+        filter: drop-shadow(0 0 6px #29ABE2);
+      }
+    `}
+  </style>
+</a>
 
             <Link
               to={createPageUrl('Contact')}
