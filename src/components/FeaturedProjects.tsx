@@ -21,10 +21,10 @@ const projects = [
   },
   {
     id: 3,
-    title: 'Bondi Beach Duplex',
+    title: '1/7 Remy Court',
     category: 'Duplex',
     image: '/images/remy court.jpg',
-    location: 'Bondi Beach, NSW',
+    location: 'Avoca',
   },
   {
     id: 4,
