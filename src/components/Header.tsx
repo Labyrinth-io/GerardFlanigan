@@ -57,7 +57,7 @@ export default function Header() {
               </span>
             </div>
           </Link>
- 
+
           <nav className="hidden lg:flex items-center space-x-8">
             {navItems.map((item) => (
               <Link
