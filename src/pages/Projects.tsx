@@ -24,10 +24,6 @@ const projects = [
     image: 'public/images/johnfrancisdrive.jpg',
     description: 'An architectural masterpiece featuring harbour views, infinity pool, and smart home integration.',
   },
-  title: '11 John Francis Drive',
-    category: 'Premium Home',
-    image: 'public/images/johnfrancisdrive.jpg',
-    location: 'Carrara, Gold Coast'
   {
     id: 3,
     title: 'Bondi Beach Duplex',
