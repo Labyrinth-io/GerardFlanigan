@@ -39,18 +39,26 @@ export default function Header() {
               alt="Gerard Flanigan Logo"
               className="h-12 w-12 sm:h-14 sm:w-14"
             />
-            <div className="flex flex-col">
+            <div className="flex flex-col leading-tight">
               <span
                 className="text-xl sm:text-2xl font-bold tracking-wide"
                 style={{ color: '#FEFEFE', fontFamily: 'system-ui' }}
               >
                 GERARD FLANIGAN
               </span>
+
+              {/* ✅ FIXED CONSTRUCTIONS SPACING + SIZE */}
               <span
-                className="text-xs sm:text-sm uppercase"
+                className="uppercase"
                 style={{
                   color: '#29ABE2',
-                  letterSpacing: '0.85em'
+                  letterSpacing: '0.65em',
+                  fontSize: '0.6rem',
+                  lineHeight: '1rem',
+                  transform: 'translateY(1px)',
+                  whiteSpace: 'nowrap',
+                  display: 'inline-block',
+                  maxWidth: '100%',
                 }}
               >
                 CONSTRUCTIONS
@@ -91,8 +99,12 @@ export default function Header() {
                 backgroundColor: '#E67E22',
                 color: '#FEFEFE',
               }}
-              onMouseEnter={(e) => (e.currentTarget.style.backgroundColor = '#C15427')}
-              onMouseLeave={(e) => (e.currentTarget.style.backgroundColor = '#E67E22')}
+              onMouseEnter={(e) =>
+                (e.currentTarget.style.backgroundColor = '#C15427')
+              }
+              onMouseLeave={(e) =>
+                (e.currentTarget.style.backgroundColor = '#E67E22')
+              }
             >
               Request a Quote
             </Link>
@@ -107,6 +119,7 @@ export default function Header() {
           </button>
         </div>
 
+        {/* Mobile menu */}
         <div
           className={`lg:hidden overflow-hidden transition-all duration-300 ${
             mobileMenuOpen ? 'max-h-96 pb-6' : 'max-h-0'
@@ -124,6 +137,7 @@ export default function Header() {
                 {item.name}
               </Link>
             ))}
+
             <a
               href="tel:0477037911"
               className="flex items-center space-x-2 py-2"
@@ -132,6 +146,7 @@ export default function Header() {
               <Phone size={18} style={{ color: '#29ABE2' }} />
               <span className="font-medium">0477 037 911</span>
             </a>
+
             <Link
               to={createPageUrl('Contact')}
               className="inline-block px-6 py-3 text-sm font-semibold uppercase tracking-wide text-center"
