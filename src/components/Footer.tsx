@@ -63,7 +63,7 @@ export default function Footer() {
               style={{ color: '#B8B8B8' }}
               className="text-sm leading-relaxed"
             >
-              Building excellence across Bundaberg for over 25 years. Commercial
+              Building excellence across Bundaberg for over 30 years. Commercial
               projects, premium homes, and quality renovations.
             </p>
             <div
