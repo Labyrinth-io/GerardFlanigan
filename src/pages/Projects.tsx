@@ -4,16 +4,16 @@ import { ArrowUpRight, MapPin, Calendar } from 'lucide-react';
 import CTAStrip from '../components/CTAStrip';
 
 const categories = ['All', 'Commercial', 'Premium Homes', 'Duplexes', 'Renovations'];
-
+ 
 const projects = [
   {
     id: 1,
-    title: 'Friendly Society Hospital',
+    title: 'Harbourview Commercial Complex',
     category: 'Commercial',
-    location: 'Bundaberg West',
+    location: 'Bundaberg CBD',
     year: '2024',
-    image: '/images/Friendlies.jpg',
-    description: 'A high-quality medical suites build for The Friendlies Hospital, designed and constructed to meet strict clinical standards while maintaining exceptional finish and functionality.',
+    image: 'https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=800&q=80',
+    description: 'A landmark 12-storey commercial development featuring premium office spaces and ground-floor retail.',
   },
   {
     id: 2,
@@ -24,10 +24,6 @@ const projects = [
     image: 'https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=800&q=80',
     description: 'An architectural masterpiece featuring harbour views, infinity pool, and smart home integration.',
   },
-  title: '11 John Francis Drive',
-    category: 'Premium Home',
-    image: 'public/images/johnfrancisdrive.jpg',
-    location: 'Carrara, Gold Coast'
   {
     id: 3,
     title: 'Bondi Beach Duplex',
@@ -46,7 +42,6 @@ const projects = [
     image: 'https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=800&q=80',
     description: 'Sympathetic restoration of a Victorian terrace with contemporary additions.',
   },
-  Bargara
   {
     id: 5,
     title: 'North Bundaberg Office Tower',
