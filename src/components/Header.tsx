@@ -32,8 +32,13 @@ export default function Header() {
       style={{ backgroundColor: '#221F20' }}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex items-center justify-between h-20">
-          <Link to={createPageUrl('Home')} className="flex items-center gap-3">
+        {/* MAIN DESKTOP ROW */}
+        <div className="flex items-center h-20 gap-6">
+          {/* Logo + wordmark */}
+          <Link
+            to={createPageUrl('Home')}
+            className="flex items-center gap-3 flex-shrink-0"
+          >
             <img
               src="/Gerard Logo copy.svg"
               alt="Gerard Flanigan Logo"
@@ -46,13 +51,11 @@ export default function Header() {
               >
                 GERARD FLANIGAN
               </span>
-
-              {/* ✅ FIXED CONSTRUCTIONS SPACING + SIZE */}
               <span
                 className="uppercase"
                 style={{
                   color: '#29ABE2',
-                  letterSpacing: '1.28em',
+                  letterSpacing: '1.28em', // <- your tuned value
                   fontSize: '0.6rem',
                   lineHeight: '1rem',
                   transform: 'translateY(1px)',
@@ -66,12 +69,13 @@ export default function Header() {
             </div>
           </Link>
 
-          <nav className="hidden lg:flex items-center space-x-8">
+          {/* Nav in the middle */}
+          <nav className="hidden lg:flex items-center justify-center gap-6 flex-1">
             {navItems.map((item) => (
               <Link
                 key={item.name}
                 to={createPageUrl(item.page)}
-                className="relative text-sm font-medium tracking-wide uppercase transition-colors duration-200 group"
+                className="relative text-xs lg:text-sm font-medium tracking-wide uppercase transition-colors duration-200 group"
                 style={{ color: '#FEFEFE' }}
               >
                 {item.name}
@@ -83,18 +87,21 @@ export default function Header() {
             ))}
           </nav>
 
-          <div className="hidden md:flex items-center space-x-6">
+          {/* Phone + CTA on the right */}
+          <div className="hidden md:flex items-center gap-4 flex-shrink-0">
             <a
               href="tel:0477037911"
-              className="flex items-center space-x-2 transition-colors duration-200"
+              className="flex items-center gap-2 transition-colors duration-200"
               style={{ color: '#FEFEFE' }}
             >
               <Phone size={18} style={{ color: '#29ABE2' }} />
-              <span className="font-medium">0477 037 911</span>
+              <span className="font-medium text-sm lg:text-base">
+                0477 037 911
+              </span>
             </a>
             <Link
               to={createPageUrl('Contact')}
-              className="px-6 py-3 text-sm font-semibold uppercase tracking-wide transition-all duration-300 hover:scale-105"
+              className="px-5 py-2.5 text-xs lg:text-sm font-semibold uppercase tracking-wide transition-all duration-300 hover:scale-105"
               style={{
                 backgroundColor: '#E67E22',
                 color: '#FEFEFE',
@@ -110,8 +117,9 @@ export default function Header() {
             </Link>
           </div>
 
+          {/* Mobile menu button */}
           <button
-            className="lg:hidden p-2"
+            className="lg:hidden p-2 ml-auto"
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
             style={{ color: '#FEFEFE' }}
           >
@@ -119,7 +127,7 @@ export default function Header() {
           </button>
         </div>
 
-        {/* Mobile menu */}
+        {/* MOBILE MENU DROPDOWN */}
         <div
           className={`lg:hidden overflow-hidden transition-all duration-300 ${
             mobileMenuOpen ? 'max-h-96 pb-6' : 'max-h-0'
@@ -137,16 +145,14 @@ export default function Header() {
                 {item.name}
               </Link>
             ))}
-
             <a
               href="tel:0477037911"
-              className="flex items-center space-x-2 py-2"
+              className="flex items-center gap-2 py-2"
               style={{ color: '#FEFEFE' }}
             >
               <Phone size={18} style={{ color: '#29ABE2' }} />
               <span className="font-medium">0477 037 911</span>
             </a>
-
             <Link
               to={createPageUrl('Contact')}
               className="inline-block px-6 py-3 text-sm font-semibold uppercase tracking-wide text-center"
