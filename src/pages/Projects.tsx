@@ -77,7 +77,7 @@ const projects = [
     category: 'Residential',
     location: 'Avoca, Bundaberg, QLD',
     year: '2019', // based on sale timing – update to true build year if different
-    image: '/images/remy-court-5.jpg', // update to your actual filename
+    image: '/images/5remycourt.webp',
     description:
       'Contemporary single-storey home in a quiet Avoca cul-de-sac, designed for low-maintenance family living.',
   },
