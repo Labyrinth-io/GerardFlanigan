@@ -220,7 +220,6 @@ export default function Footer() {
               © {currentYear} Gerard Flanigan Builder. All rights reserved.
             </p>
             <p className="text-sm" style={{ color: '#666666' }}>
-              Licensed Builder | NSW Licence #123456C
             </p>
           </div>
         </div>
