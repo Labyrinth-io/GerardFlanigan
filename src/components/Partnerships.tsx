@@ -60,7 +60,7 @@ export default function Partnerships() {
         </div>
 
         {/* Logos only – no boxes, no names, no descriptions */}
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-8 items-center">
+        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-8 items-center">
           {partners.map((partner, index) => (
             <motion.div
               key={partner.alt}
@@ -73,7 +73,7 @@ export default function Partnerships() {
               <img
                 src={partner.imgSrc}
                 alt={partner.alt}
-                className="max-h-40 w-auto object-contain"
+                className="max-h-32 w-auto object-contain"
               />
             </motion.div>
           ))}
