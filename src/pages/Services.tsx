@@ -32,7 +32,7 @@ const services = [
     title: 'Renovations & Extensions',
     description: 'Transform your existing property with thoughtfully designed renovations and extensions that enhance functionality, increase value, and respect the character of your home.',
     features: ['Kitchen Renovations', 'Bathroom Upgrades', 'Room Extensions', 'Second Storey Additions', 'Structural Modifications'],
-    image: 'https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=800&q=80',
+    image: 'public/images/johnfrancisinterior.jpg',
   },
   {
     icon: Ruler,
