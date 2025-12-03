@@ -18,7 +18,7 @@ const services = [
     title: 'Premium Custom Homes',
     description: 'From architectural masterpieces to contemporary family residences, we craft luxury homes that reflect your unique vision with exceptional materials and meticulous craftsmanship.',
     features: ['Architectural Design', 'Luxury Finishes', 'Smart Home Integration', 'Sustainable Building', 'Custom Joinery'],
-    image: 'https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=800&q=80',
+    image: '/images/johnfrancispool.png',
   },
   {
     icon: Layers,
