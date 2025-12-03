@@ -92,7 +92,7 @@ export default function About() {
                   className="text-5xl font-bold block"
                   style={{ color: '#FEFEFE' }}
                 >
-                  25+
+                  30+
                 </span>
                 <span
                   className="text-sm uppercase tracking-wider"
