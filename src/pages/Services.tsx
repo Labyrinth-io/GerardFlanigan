@@ -172,8 +172,10 @@ export default function Services() {
                   src={service.image}
                   alt={service.title}
                   className="w-full"
-                  className="w-full h-[350px] object-cover",
-                  }
+                  style={{
+                    aspectRatio: '4/3',
+                    objectFit: 'cover', 
+                  }}
                 />
 
                 <div
