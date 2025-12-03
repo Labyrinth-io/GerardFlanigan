@@ -20,14 +20,14 @@ const projects = [
   },
   {
   id: 2,
-    title: '39 Scenery Street, West Gladstone',
-    category: 'Commercial',
-    location: 'West Gladstone, QLD',
-    year: '2013',
-    image: '/images/scenerystreet.jpg',
-    description:
-      'A contemporary multi-level townhouse development maximising an elevated site with outlooks over West Gladstone.', 
-  },
+  title: '39 Scenery Street, West Gladstone',
+  category: 'Commercial',
+  location: 'West Gladstone, QLD',
+  year: '2013',
+  image: '/images/scenerystreet.webp',  // ← example — use your real filename
+  description:
+    'A contemporary multi-level townhouse development maximising an elevated site with outlooks over West Gladstone.',
+},
   {
     id: 3,
     title: '1 Bayne Street, West Gladstone',
