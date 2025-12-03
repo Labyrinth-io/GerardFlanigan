@@ -19,7 +19,7 @@ const testimonials = [
     name: 'Sarah & David Chen',
     role: 'Homeowners',
     company: 'Mosman',
-    quote: 'Building our dream home was a seamless experience. From initial design consultations to final handover, the communication was exceptional. We couldn\'t be happier with the result.',
+    quote: 'Building our dream home with Gerard was genuinely stress-free. From the first design meeting right through to handover, the communication was clear, honest, and consistent. The final result was everything we hoped for, and more.',
     rating: 5,
     featured: false,
   },
