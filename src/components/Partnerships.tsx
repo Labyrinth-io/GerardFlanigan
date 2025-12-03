@@ -1,18 +1,36 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Shield, Award, CheckCircle2, BadgeCheck } from 'lucide-react';
+import { CheckCircle2, BadgeCheck } from 'lucide-react';
 
 const accreditations = [
-  { icon: Shield, name: 'Master Builders Association', description: 'Certified Member' },
-  { icon: Award, name: 'HIA', description: 'Housing Industry Association' },
-  { icon: CheckCircle2, name: 'Licensed & Insured', description: 'Full Coverage' },
-  { icon: BadgeCheck, name: 'NSW Fair Trading', description: 'Registered Builder' },
+  {
+    imgSrc: '/images/masterbuilders.png',
+    name: 'Master Builders Queensland',
+    description: 'Certified Member',
+  },
+  {
+    imgSrc: '/images/gatley.png',
+    name: 'Gatley Building Supplies',
+    description: 'Preferred Supplier Partnership',
+  },
+  {
+    icon: CheckCircle2,
+    name: 'Licensed & Insured',
+    description: 'Full Coverage',
+  },
+  {
+    icon: BadgeCheck,
+    name: 'NSW Fair Trading',
+    description: 'Registered Builder',
+  },
 ];
 
 export default function Partnerships() {
   return (
     <section className="py-24" style={{ backgroundColor: '#FFFFFF' }}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        {/* Section Header */}
         <div className="text-center mb-16">
           <motion.span
             initial={{ opacity: 0, y: 20 }}
@@ -23,6 +41,7 @@ export default function Partnerships() {
           >
             Trusted & Accredited
           </motion.span>
+
           <motion.h2
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -33,6 +52,7 @@ export default function Partnerships() {
           >
             Industry Partnerships
           </motion.h2>
+
           <motion.div
             initial={{ scaleX: 0 }}
             whileInView={{ scaleX: 1 }}
@@ -43,6 +63,7 @@ export default function Partnerships() {
           />
         </div>
 
+        {/* Cards */}
         <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
           {accreditations.map((item, index) => (
             <motion.div
@@ -60,28 +81,32 @@ export default function Partnerships() {
                   border: '2px solid #E6E6E6',
                 }}
               >
-                <item.icon
-                  size={36}
-                  style={{ color: '#0071BC' }}
-                  strokeWidth={1.5}
-                />
+                {item.imgSrc ? (
+                  <img
+                    src={item.imgSrc}
+                    alt={item.name}
+                    className="max-h-14 w-auto object-contain"
+                  />
+                ) : (
+                  <item.icon
+                    size={36}
+                    style={{ color: '#0071BC' }}
+                    strokeWidth={1.5}
+                  />
+                )}
               </div>
-              <h4
-                className="font-semibold mb-1"
-                style={{ color: '#221F20' }}
-              >
+
+              <h4 className="font-semibold mb-1" style={{ color: '#221F20' }}>
                 {item.name}
               </h4>
-              <p
-                className="text-sm"
-                style={{ color: '#666666' }}
-              >
+              <p className="text-sm" style={{ color: '#666666' }}>
                 {item.description}
               </p>
             </motion.div>
           ))}
         </div>
 
+        {/* Quote box */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -92,10 +117,7 @@ export default function Partnerships() {
             borderLeft: '4px solid #D4AF37',
           }}
         >
-          <p
-            className="text-lg italic"
-            style={{ color: '#5A5A5A' }}
-          >
+          <p className="text-lg italic" style={{ color: '#5A5A5A' }}>
             "Over 30 years of building excellence with a reputation built on trust,
             quality craftsmanship, and exceptional client relationships."
           </p>
