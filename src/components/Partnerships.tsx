@@ -7,9 +7,9 @@ const partners = [
     alt: 'Master Builders Queensland',
   },
   {
-    imgSrc: 'https://www.tmarchitects.com.au/',
+    imgSrc: '/images/tonymadden.png',
     alt: 'Tony Madden Architects',
-  },
+  }, 
   {
     imgSrc: '/images/dm2.png',
     alt: 'DM2 Architecture',
