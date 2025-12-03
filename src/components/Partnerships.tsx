@@ -69,7 +69,7 @@ export default function Partnerships() {
               <img
                 src={partner.imgSrc}
                 alt={partner.alt}
-                className="max-h-20 w-auto object-contain"
+                className="max-h-28 w-auto object-contain"
               />
             </motion.div>
           ))}
