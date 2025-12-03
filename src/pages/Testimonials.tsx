@@ -22,7 +22,7 @@ const testimonials = [
     quote: 'Building our dream home was a seamless experience. From initial design consultations to final handover, the communication was exceptional. We couldn\'t be happier with the result.',
     rating: 5,
     featured: false,
-  }, 
+  },
   {
     id: 3,
     name: 'James Morrison',
