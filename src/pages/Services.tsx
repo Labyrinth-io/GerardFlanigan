@@ -39,7 +39,7 @@ const services = [
     title: 'Project Management',
     description: 'Our comprehensive project management services ensure seamless coordination of all trades, timelines, and budgets from concept through to completion.',
     features: ['Timeline Management', 'Budget Control', 'Quality Assurance', 'Contractor Coordination', 'Progress Reporting'],
-    image: 'https://images.unsplash.com/photo-1541888946425-d81bb19240f5?w=800&q=80',
+    image: '/images/constructionsite.webp',
   },
   {
     icon: PaintBucket,
