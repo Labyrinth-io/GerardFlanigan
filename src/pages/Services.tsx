@@ -2,50 +2,101 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { createPageUrl } from '../utils';
 import { motion } from 'framer-motion';
-import { Building2, Home, Layers, Hammer, Ruler, PaintBucket, ArrowRight, CheckCircle2 } from 'lucide-react';
+import {
+  Building2,
+  Home,
+  Layers,
+  Hammer,
+  Ruler,
+  PaintBucket,
+  ArrowRight,
+  CheckCircle2,
+} from 'lucide-react';
 import CTAStrip from '../components/CTAStrip';
 
 const services = [
   {
     icon: Building2,
     title: 'Commercial & Multi-Level Projects',
-    description: 'We specialise in complex commercial developments and multi-storey constructions that demand precision engineering, expert project management, and unwavering attention to safety standards.',
-    features: ['Office Buildings', 'Retail Spaces', 'Multi-storey Residential', 'Industrial Facilities', 'Mixed-use Developments'],
+    description:
+      'We specialise in complex commercial developments and multi-storey constructions that demand precision engineering, expert project management, and unwavering attention to safety standards.',
+    features: [
+      'Office Buildings',
+      'Retail Spaces',
+      'Multi-storey Residential',
+      'Industrial Facilities',
+      'Mixed-use Developments',
+    ],
     image: '/images/baynestreet2.webp',
   },
   {
     icon: Home,
     title: 'Premium Custom Homes',
-    description: 'From architectural masterpieces to contemporary family residences, we craft luxury homes that reflect your unique vision with exceptional materials and meticulous craftsmanship.',
-    features: ['Architectural Design', 'Luxury Finishes', 'Smart Home Integration', 'Sustainable Building', 'Custom Joinery'],
+    description:
+      'From architectural masterpieces to contemporary family residences, we craft luxury homes that reflect your unique vision with exceptional materials and meticulous craftsmanship.',
+    features: [
+      'Architectural Design',
+      'Luxury Finishes',
+      'Smart Home Integration',
+      'Sustainable Building',
+      'Custom Joinery',
+    ],
     image: '/images/johnfrancispool.png',
   },
   {
     icon: Layers,
     title: 'Duplexes & Multi-Dwellings',
-    description: 'Maximise your land investment with expertly designed and constructed duplexes and multi-dwelling developments that meet market demands while exceeding quality standards.',
-    features: ['Dual Occupancy', 'Townhouse Developments', 'Investment Properties', 'Land Subdivision', 'Strata Management'],
+    description:
+      'Maximise your land investment with expertly designed and constructed duplexes and multi-dwelling developments that meet market demands while exceeding quality standards.',
+    features: [
+      'Dual Occupancy',
+      'Townhouse Developments',
+      'Investment Properties',
+      'Land Subdivision',
+      'Strata Management',
+    ],
     image: 'public/images/remyduplux.jpg',
   },
   {
     icon: Hammer,
     title: 'Renovations & Extensions',
-    description: 'Transform your existing property with thoughtfully designed renovations and extensions that enhance functionality, increase value, and respect the character of your home.',
-    features: ['Kitchen Renovations', 'Bathroom Upgrades', 'Room Extensions', 'Second Storey Additions', 'Structural Modifications'],
+    description:
+      'Transform your existing property with thoughtfully designed renovations and extensions that enhance functionality, increase value, and respect the character of your home.',
+    features: [
+      'Kitchen Renovations',
+      'Bathroom Upgrades',
+      'Room Extensions',
+      'Second Storey Additions',
+      'Structural Modifications',
+    ],
     image: 'public/images/johnfrancisinterior.jpg',
   },
   {
     icon: Ruler,
     title: 'Project Management',
-    description: 'Our comprehensive project management services ensure seamless coordination of all trades, timelines, and budgets from concept through to completion.',
-    features: ['Timeline Management', 'Budget Control', 'Quality Assurance', 'Contractor Coordination', 'Progress Reporting'],
+    description:
+      'Our comprehensive project management services ensure seamless coordination of all trades, timelines, and budgets from concept through to completion.',
+    features: [
+      'Timeline Management',
+      'Budget Control',
+      'Quality Assurance',
+      'Contractor Coordination',
+      'Progress Reporting',
+    ],
     image: '/images/constructionsite.webp',
   },
   {
     icon: PaintBucket,
     title: 'Fit-outs & Interior Works',
-    description: 'Commercial and residential fit-outs delivered with precision, transforming empty spaces into functional, aesthetically pleasing environments.',
-    features: ['Commercial Fit-outs', 'Retail Shopfitting', 'Office Renovations', 'Custom Cabinetry', 'Interior Finishes'],
+    description:
+      'Commercial and residential fit-outs delivered with precision, transforming empty spaces into functional, aesthetically pleasing environments.',
+    features: [
+      'Commercial Fit-outs',
+      'Retail Shopfitting',
+      'Office Renovations',
+      'Custom Cabinetry',
+      'Interior Finishes',
+    ],
     image: '/images/johnfrancisfitouts.jpg',
   },
 ];
@@ -97,19 +148,31 @@ export default function Services() {
           style={{ backgroundColor: index % 2 === 0 ? '#FFFFFF' : '#F8F8F8' }}
         >
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className={`grid grid-cols-1 lg:grid-cols-2 gap-16 items-center ${index % 2 === 1 ? 'lg:flex-row-reverse' : ''}`}>
+            <div
+              className={`grid grid-cols-1 lg:grid-cols-2 gap-16 items-center ${
+                index % 2 === 1 ? 'lg:flex-row-reverse' : ''
+              }`}
+            >
               <motion.div
                 initial={{ opacity: 0, x: index % 2 === 0 ? -30 : 30 }}
                 whileInView={{ opacity: 1, x: 0 }}
                 viewport={{ once: true }}
-                className={`relative ${index % 2 === 1 ? 'lg:order-2' : ''}`}
+                className={`relative ${
+                  index % 2 === 1 ? 'lg:order-2' : ''
+                }`}
               >
-                <img
-                  src={service.image}
-                  alt={service.title}
-                  className="w-full"
-                  style={{ aspectRatio: '4/3', objectFit: 'cover' }}
-                />
+                {/* IMAGE WRAPPER – forces 4:3 card and full cover */}
+                <div
+                  className="relative w-full overflow-hidden"
+                  style={{ aspectRatio: '4/3' }}
+                >
+                  <img
+                    src={service.image}
+                    alt={service.title}
+                    className="absolute inset-0 w-full h-full object-cover"
+                  />
+                </div>
+
                 <div
                   className="absolute -bottom-6 left-8 p-4"
                   style={{
@@ -145,9 +208,17 @@ export default function Services() {
 
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 mb-8">
                   {service.features.map((feature) => (
-                    <div key={feature} className="flex items-center space-x-3">
+                    <div
+                      key={feature}
+                      className="flex items-center space-x-3"
+                    >
                       <CheckCircle2 size={18} style={{ color: '#0071BC' }} />
-                      <span className="text-sm" style={{ color: '#666666' }}>{feature}</span>
+                      <span
+                        className="text-sm"
+                        style={{ color: '#666666' }}
+                      >
+                        {feature}
+                      </span>
                     </div>
                   ))}
                 </div>
@@ -161,7 +232,10 @@ export default function Services() {
                   }}
                 >
                   Get a Quote
-                  <ArrowRight size={18} className="ml-2 transition-transform duration-300 group-hover:translate-x-1" />
+                  <ArrowRight
+                    size={18}
+                    className="ml-2 transition-transform duration-300 group-hover:translate-x-1"
+                  />
                 </Link>
               </motion.div>
             </div>
