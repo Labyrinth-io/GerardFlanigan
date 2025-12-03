@@ -96,7 +96,7 @@ export default function Partnerships() {
             className="text-lg italic"
             style={{ color: '#5A5A5A' }}
           >
-            "Over 25 years of building excellence with a reputation built on trust,
+            "Over 30 years of building excellence with a reputation built on trust,
             quality craftsmanship, and exceptional client relationships."
           </p>
         </motion.div>
