@@ -29,7 +29,8 @@ export default function Partnerships() {
   return (
     <section className="py-24" style={{ backgroundColor: '#FFFFFF' }}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        {/* Title / Intro – unchanged */}
+        
+        {/* Section Header */}
         <div className="text-center mb-16">
           <motion.span
             initial={{ opacity: 0, y: 20 }}
@@ -40,6 +41,7 @@ export default function Partnerships() {
           >
             Trusted & Accredited
           </motion.span>
+
           <motion.h2
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -50,6 +52,7 @@ export default function Partnerships() {
           >
             Industry Partnerships
           </motion.h2>
+
           <motion.div
             initial={{ scaleX: 0 }}
             whileInView={{ scaleX: 1 }}
@@ -60,27 +63,50 @@ export default function Partnerships() {
           />
         </div>
 
-        {/* Logos only – no boxes, no names, no descriptions */}
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-8 items-center">
-          {partners.map((partner, index) => (
+        {/* Cards */}
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
+          {accreditations.map((item, index) => (
             <motion.div
-              key={partner.alt}
+              key={item.name}
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: index * 0.1 }}
-              className="flex items-center justify-center"
+              className="text-center p-6 group"
             >
-              <img
-                src={partner.imgSrc}
-                alt={partner.alt}
-                className="max-h-20 w-auto object-contain"
-              />
+              <div
+                className="w-20 h-20 mx-auto mb-4 flex items-center justify-center transition-all duration-300 group-hover:scale-110"
+                style={{
+                  backgroundColor: '#F8F8F8',
+                  border: '2px solid #E6E6E6',
+                }}
+              >
+                {item.imgSrc ? (
+                  <img
+                    src={item.imgSrc}
+                    alt={item.name}
+                    className="max-h-14 w-auto object-contain"
+                  />
+                ) : (
+                  <item.icon
+                    size={36}
+                    style={{ color: '#0071BC' }}
+                    strokeWidth={1.5}
+                  />
+                )}
+              </div>
+
+              <h4 className="font-semibold mb-1" style={{ color: '#221F20' }}>
+                {item.name}
+              </h4>
+              <p className="text-sm" style={{ color: '#666666' }}>
+                {item.description}
+              </p>
             </motion.div>
           ))}
         </div>
 
-        {/* Quote box – unchanged */}
+        {/* Quote box */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -91,10 +117,7 @@ export default function Partnerships() {
             borderLeft: '4px solid #D4AF37',
           }}
         >
-          <p
-            className="text-lg italic"
-            style={{ color: '#5A5A5A' }}
-          >
+          <p className="text-lg italic" style={{ color: '#5A5A5A' }}>
             "Over 30 years of building excellence with a reputation built on trust,
             quality craftsmanship, and exceptional client relationships."
           </p>
@@ -102,4 +125,4 @@ export default function Partnerships() {
       </div>
     </section>
   );
-}
+} 
