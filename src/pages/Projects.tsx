@@ -24,7 +24,7 @@ const projects = [
   category: 'Commercial',
   location: 'West Gladstone, QLD',
   year: '2013',
-  image: '/images/scenerystreet.webp',  // ← example — use your real filename
+  image: '/images/scenerystreet.jpg',  // ← example — use your real filename
   description:
     'A contemporary multi-level townhouse development maximising an elevated site with outlooks over West Gladstone.',
 },
