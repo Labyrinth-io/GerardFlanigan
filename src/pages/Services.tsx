@@ -173,7 +173,7 @@ export default function Services() {
                   alt={service.title}
                   className="w-full"
                   className="w-full h-[350px] object-cover",
-                  }}
+                  }
                 />
 
                 <div
