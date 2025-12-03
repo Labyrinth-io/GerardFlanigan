@@ -55,7 +55,7 @@ const services = [
       'Land Subdivision',
       'Strata Management',
     ],
-    image: 'public/images/remyduplux.jpg',
+    image: '/images/remyduplux.jpg',
   },
   {
     icon: Hammer,
@@ -69,7 +69,7 @@ const services = [
       'Second Storey Additions',
       'Structural Modifications',
     ],
-    image: 'public/images/johnfrancisinterior.jpg',
+    image: '/images/johnfrancisinterior.jpg',
   },
   {
     icon: Ruler,
