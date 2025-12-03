@@ -1,20 +1,9 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { Shield, Award, CheckCircle2, BadgeCheck } from 'lucide-react';
-
+ 
 const accreditations = [
-  { 
-    icon: () => (
-      <img 
-        src="/images/masterbuilders.png" 
-        alt="Master Builders Accreditation" 
-        className="h-10 w-auto object-contain"
-      />
-    ),
-    name: 'Master Builders Association',
-    description: 'Certified Member'
-  },
-];
+  { icon: Shield, name: 'Master Builders Association', description: 'Certified Member' },
   { icon: Award, name: 'HIA', description: 'Housing Industry Association' },
   { icon: CheckCircle2, name: 'Licensed & Insured', description: 'Full Coverage' },
   { icon: BadgeCheck, name: 'NSW Fair Trading', description: 'Registered Builder' },
