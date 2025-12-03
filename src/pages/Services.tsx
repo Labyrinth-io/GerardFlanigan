@@ -55,7 +55,7 @@ const services = [
       'Land Subdivision',
       'Strata Management',
     ],
-    image: '/images/remyduplux.jpg',
+    image: 'public/images/remyduplux.jpg',
   },
   {
     icon: Hammer,
@@ -69,7 +69,7 @@ const services = [
       'Second Storey Additions',
       'Structural Modifications',
     ],
-    image: '/images/johnfrancisinterior.jpg',
+    image: 'public/images/johnfrancisinterior.jpg',
   },
   {
     icon: Ruler,
@@ -104,6 +104,7 @@ const services = [
 export default function Services() {
   return (
     <div>
+      {/* HERO SECTION */}
       <section
         className="relative py-32 md:py-40"
         style={{ backgroundColor: '#221F20' }}
@@ -118,6 +119,7 @@ export default function Services() {
             >
               Our Services
             </motion.span>
+
             <motion.h1
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
@@ -127,6 +129,7 @@ export default function Services() {
             >
               Comprehensive Building Solutions
             </motion.h1>
+
             <motion.p
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
@@ -141,53 +144,57 @@ export default function Services() {
         </div>
       </section>
 
+      {/* SERVICE SECTIONS */}
       {services.map((service, index) => (
         <section
           key={service.title}
           className="py-24"
-          style={{ backgroundColor: index % 2 === 0 ? '#FFFFFF' : '#F8F8F8' }}
+          style={{
+            backgroundColor: index % 2 === 0 ? '#FFFFFF' : '#F8F8F8',
+          }}
         >
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div
-              className={`grid grid-cols-1 lg:grid-cols-2 gap-16 items-stretch ${
+              className={`grid grid-cols-1 lg:grid-cols-2 gap-16 items-center ${
                 index % 2 === 1 ? 'lg:flex-row-reverse' : ''
               }`}
             >
-              {/* IMAGE COLUMN */}
+              {/* IMAGE */}
               <motion.div
                 initial={{ opacity: 0, x: index % 2 === 0 ? -30 : 30 }}
                 whileInView={{ opacity: 1, x: 0 }}
                 viewport={{ once: true }}
-                className={`relative h-full ${
+                className={`relative ${
                   index % 2 === 1 ? 'lg:order-2' : ''
                 }`}
               >
-                <div className="relative w-full h-full min-h-[260px] overflow-hidden">
-                  <img
-                    src={service.image}
-                    alt={service.title}
-                    className="absolute inset-0 w-full h-full object-cover"
-                  />
-                </div>
+                <img
+                  src={service.image}
+                  alt={service.title}
+                  className="w-full"
+                  style={{
+                    aspectRatio: '4/3',
+                    objectFit: 'cover',
+                  }}
+                />
 
                 <div
                   className="absolute -bottom-6 left-8 p-4"
                   style={{
-                    background: 'linear-gradient(135deg, #0071BC, #00A2E8)',
+                    background:
+                      'linear-gradient(135deg, #0071BC, #00A2E8)',
                   }}
                 >
                   <service.icon size={32} style={{ color: '#FEFEFE' }} />
                 </div>
               </motion.div>
 
-              {/* TEXT COLUMN */}
+              {/* TEXT */}
               <motion.div
                 initial={{ opacity: 0, x: index % 2 === 0 ? 30 : -30 }}
                 whileInView={{ opacity: 1, x: 0 }}
                 viewport={{ once: true }}
-                className={`flex flex-col justify-center ${
-                  index % 2 === 1 ? 'lg:order-1' : ''
-                }`}
+                className={index % 2 === 1 ? 'lg:order-1' : ''}
               >
                 <h2
                   className="text-2xl sm:text-3xl font-bold mb-6"
@@ -195,10 +202,12 @@ export default function Services() {
                 >
                   {service.title}
                 </h2>
+
                 <div
                   className="w-16 h-0.5 mb-6"
                   style={{ backgroundColor: '#D4AF37' }}
                 />
+
                 <p
                   className="text-lg leading-relaxed mb-8"
                   style={{ color: '#5A5A5A' }}
@@ -212,7 +221,10 @@ export default function Services() {
                       key={feature}
                       className="flex items-center space-x-3"
                     >
-                      <CheckCircle2 size={18} style={{ color: '#0071BC' }} />
+                      <CheckCircle2
+                        size={18}
+                        style={{ color: '#0071BC' }}
+                      />
                       <span
                         className="text-sm"
                         style={{ color: '#666666' }}
