@@ -27,7 +27,7 @@ const services = [
       'Industrial Facilities',
       'Mixed-use Developments',
     ],
-    image: 'public/images/baynestreet2.jpg',
+    image: '/images/baynestreet2.jpg',
   },
   {
     icon: Home,
