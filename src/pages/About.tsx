@@ -78,7 +78,7 @@ export default function About() {
             >
               <img
                 src="public/images/Gerard.jpg"
-                alt="Gerard Flanigan Builder - Construction Site"
+                alt="Gerard Flanigan - Construction Consultation"
                 className="w-full"
                 style={{ aspectRatio: '4/5', objectFit: 'cover' }}
               />
