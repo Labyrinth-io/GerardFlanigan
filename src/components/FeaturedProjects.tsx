@@ -80,15 +80,19 @@ export default function FeaturedProjects() {
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           {projects.map((project, index) => (
-            <motion.div
+            <Link
               key={project.id}
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ delay: index * 0.1 }}
-              className="group relative overflow-hidden cursor-pointer"
-              style={{ aspectRatio: '16/10' }}
+              to={createPageUrl('Projects')}
+              className="block"
             >
+              <motion.div
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: index * 0.1 }}
+                className="group relative overflow-hidden cursor-pointer"
+                style={{ aspectRatio: '16/10' }}
+              >
               <img
                 src={project.image}
                 alt={project.title}
@@ -143,6 +147,7 @@ export default function FeaturedProjects() {
                 </div>
               </div>
             </motion.div>
+            </Link>
           ))}
         </div>
       </div>
