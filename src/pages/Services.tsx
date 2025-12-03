@@ -69,7 +69,7 @@ const services = [
       'Second Storey Additions',
       'Structural Modifications',
     ],
-    image: 'public/images/johnfrancisinterior.jpg',
+    image: '/images/johnfrancisinterior.jpg',
   },
   {
     icon: Ruler,
