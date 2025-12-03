@@ -9,7 +9,7 @@ const partners = [
   {
     imgSrc: '/images/tonymadden.png',
     alt: 'Tony Madden Architects',
-  }, 
+  },
   {
     imgSrc: '/images/dm2.png',
     alt: 'DM2 Architecture',
