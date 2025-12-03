@@ -1,7 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { Shield, Award, CheckCircle2, BadgeCheck } from 'lucide-react';
- 
+
 const accreditations = [
   { icon: Shield, name: 'Master Builders Association', description: 'Certified Member' },
   { icon: Award, name: 'HIA', description: 'Housing Industry Association' },
