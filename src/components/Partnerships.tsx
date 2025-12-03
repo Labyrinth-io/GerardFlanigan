@@ -18,6 +18,10 @@ const partners = [
     imgSrc: '/images/gatley.png',
     alt: 'Gatley Building Design',
   },
+  {
+    imgSrc: '/images/kenspumbing.png',
+    alt: 'Ken\'s Plumbing',
+  },
 ];
 
 export default function Partnerships() {
