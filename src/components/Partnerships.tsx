@@ -7,8 +7,8 @@ const partners = [
     alt: 'Master Builders Queensland',
   },
   {
-    imgSrc: '/images/tonymadden.png',
-    alt: 'Tony Madden Architects',
+    imgSrc: '/images/cqbuildingsupplies.png',
+    alt: 'CQ Building Supplies',
   },
   {
     imgSrc: '/images/dm2.png',
