@@ -144,7 +144,7 @@ export default function Services() {
         </div>
       </section>
 
-      {/* SERVICE SECTIONS */}
+      {/* SERVICES SECTIONS */}
       {services.map((service, index) => (
         <section
           key={service.title}
@@ -164,32 +164,25 @@ export default function Services() {
                 initial={{ opacity: 0, x: index % 2 === 0 ? -30 : 30 }}
                 whileInView={{ opacity: 1, x: 0 }}
                 viewport={{ once: true }}
-                className={`relative ${
-                  index % 2 === 1 ? 'lg:order-2' : ''
-                }`}
+                className={`relative ${index % 2 === 1 ? 'lg:order-2' : ''}`}
               >
                 <img
                   src={service.image}
                   alt={service.title}
-                  className="w-full"
-                  style={{
-                    aspectRatio: '4/3',
-                    objectFit: 'cover', 
-                  }}
+                  className="w-full h-[350px] object-cover"
                 />
 
                 <div
                   className="absolute -bottom-6 left-8 p-4"
                   style={{
-                    background:
-                      'linear-gradient(135deg, #0071BC, #00A2E8)',
+                    background: 'linear-gradient(135deg, #0071BC, #00A2E8)',
                   }}
                 >
                   <service.icon size={32} style={{ color: '#FEFEFE' }} />
                 </div>
               </motion.div>
 
-              {/* TEXT */}
+              {/* TEXT CONTENT */}
               <motion.div
                 initial={{ opacity: 0, x: index % 2 === 0 ? 30 : -30 }}
                 whileInView={{ opacity: 1, x: 0 }}
