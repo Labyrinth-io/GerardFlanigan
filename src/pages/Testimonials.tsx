@@ -37,7 +37,7 @@ const testimonials = [
     name: 'Amanda Williams',
     role: 'Architect',
     company: 'Williams Architecture',
-    quote: 'As an architect, I\'ve worked with many builders over the years. Gerard\'s team stands out for their ability to translate complex designs into reality while maintaining the highest construction standards.',
+    quote: 'As an architect, I\'ve worked with many builders over the years. Gerard\'s team stands out for their ability to translate complex designs into reality while maintaining the highest standards.',
     rating: 5,
     featured: false,
   },
