@@ -138,6 +138,8 @@ export default function Testimonials() {
                       src={featuredTestimonial.image}
                       alt={featuredTestimonial.name}
                       className="w-full h-full object-cover"
+                      loading="lazy"
+                      decoding="async"
                     />
                   </div>
                 )}

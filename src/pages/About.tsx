@@ -81,6 +81,8 @@ export default function About() {
                 alt="Gerard Flanigan - Construction Consultation"
                 className="w-full"
                 style={{ aspectRatio: '4/5', objectFit: 'cover' }}
+                loading="lazy"
+                decoding="async"
               />
               <div
                 className="absolute -bottom-8 -right-8 p-8 text-center"

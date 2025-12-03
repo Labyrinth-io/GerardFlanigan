@@ -167,6 +167,8 @@ export default function Services() {
                     src={service.image}
                     alt={service.title}
                     className="w-full h-auto object-cover"
+                    loading="lazy"
+                    decoding="async"
                   />
                 </div>
 

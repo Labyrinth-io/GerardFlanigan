@@ -74,6 +74,8 @@ export default function Partnerships() {
                 src={partner.imgSrc}
                 alt={partner.alt}
                 className="max-h-32 w-auto object-contain"
+                loading="lazy"
+                decoding="async"
               />
             </motion.div>
           ))}
