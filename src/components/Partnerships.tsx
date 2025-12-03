@@ -11,8 +11,8 @@ const partners = [
     alt: 'CQ Building Supplies',
   },
   {
-    imgSrc: '/images/dm2.png',
-    alt: 'DM2 Architecture',
+    imgSrc: '/images/Kens-Tile-Centre.png',
+    alt: 'Ken\'s Tiles',
   },
   {
     imgSrc: '/images/gatley.png',
