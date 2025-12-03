@@ -55,7 +55,7 @@ const services = [
       'Land Subdivision',
       'Strata Management',
     ],
-    image: 'public/images/remyduplux.jpg',
+    image: '/images/remyduplux.jpg',
   },
   {
     icon: Hammer,
