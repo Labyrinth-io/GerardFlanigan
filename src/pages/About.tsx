@@ -126,7 +126,7 @@ export default function About() {
               />
               <div className="space-y-6" style={{ color: '#5A5A5A' }}>
                 <p className="text-lg leading-relaxed">
-                  For over three decades, Gerard Flanigan Builder has been Bundaberg's trusted partner
+                  For over three decades, Gerard Flanigan has been Bundaberg's trusted partner
                   for exceptional construction projects. From humble beginnings as a local builder,
                   we've grown into a respected name handling complex commercial developments and
                   premium residential homes.
