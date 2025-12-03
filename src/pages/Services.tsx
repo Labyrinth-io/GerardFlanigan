@@ -46,7 +46,7 @@ const services = [
     title: 'Fit-outs & Interior Works',
     description: 'Commercial and residential fit-outs delivered with precision, transforming empty spaces into functional, aesthetically pleasing environments.',
     features: ['Commercial Fit-outs', 'Retail Shopfitting', 'Office Renovations', 'Custom Cabinetry', 'Interior Finishes'],
-    image: '/images/constructionsite.webp',
+    image: '/images/johnfrancisfitouts.jpg',
   },
 ];
 
