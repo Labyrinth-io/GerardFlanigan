@@ -174,7 +174,7 @@ export default function Services() {
                   className="w-full"
                   style={{
                     aspectRatio: '4/3',
-                    objectFit: 'cover', 
+                    objectFit: 'cover',
                   }}
                 />
 
