@@ -158,15 +158,15 @@ export default function Services() {
                 initial={{ opacity: 0, x: index % 2 === 0 ? -30 : 30 }}
                 whileInView={{ opacity: 1, x: 0 }}
                 viewport={{ once: true }}
-                className={`relative h-full ${
+                className={`relative ${
                   index % 2 === 1 ? 'lg:order-2' : ''
                 }`}
               >
-                <div className="relative w-full h-full min-h-[260px] overflow-hidden">
+                <div className="relative w-full overflow-hidden">
                   <img
                     src={service.image}
                     alt={service.title}
-                    className="absolute inset-0 w-full h-full object-cover"
+                    className="w-full h-auto object-cover"
                   />
                 </div>
 
