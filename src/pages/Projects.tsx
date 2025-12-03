@@ -24,7 +24,7 @@ const projects = [
   category: 'Commercial',
   location: 'West Gladstone, QLD',
   year: '2013',
-  image: '/images/scenerystreet.jpg', 
+  image: '/images/scenerystreet.png', 
   description:
     'A contemporary multi-level townhouse development maximising an elevated site with outlooks over West Gladstone.',
 },
