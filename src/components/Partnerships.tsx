@@ -1,27 +1,22 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { CheckCircle2, BadgeCheck } from 'lucide-react';
 
-const accreditations = [
+const partners = [
   {
     imgSrc: '/images/masterbuilders.png',
-    name: 'Master Builders Queensland',
-    description: 'Certified Member',
+    alt: 'Master Builders Queensland',
+  },
+  {
+    imgSrc: '/images/tonymadden.png',
+    alt: 'Tony Madden Architects',
+  },
+  {
+    imgSrc: '/images/dm2.png',
+    alt: 'DM2 Architecture',
   },
   {
     imgSrc: '/images/gatley.png',
-    name: 'Gatley Building Supplies',
-    description: 'Preferred Supplier Partnership',
-  },
-  {
-    icon: CheckCircle2,
-    name: 'Licensed & Insured',
-    description: 'Full Coverage',
-  },
-  {
-    icon: BadgeCheck,
-    name: 'NSW Fair Trading',
-    description: 'Registered Builder',
+    alt: 'Gatley Building Design',
   },
 ];
 
@@ -29,8 +24,7 @@ export default function Partnerships() {
   return (
     <section className="py-24" style={{ backgroundColor: '#FFFFFF' }}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        
-        {/* Section Header */}
+        {/* Title / Intro – unchanged */}
         <div className="text-center mb-16">
           <motion.span
             initial={{ opacity: 0, y: 20 }}
@@ -41,7 +35,6 @@ export default function Partnerships() {
           >
             Trusted & Accredited
           </motion.span>
-
           <motion.h2
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -52,7 +45,6 @@ export default function Partnerships() {
           >
             Industry Partnerships
           </motion.h2>
-
           <motion.div
             initial={{ scaleX: 0 }}
             whileInView={{ scaleX: 1 }}
@@ -63,50 +55,27 @@ export default function Partnerships() {
           />
         </div>
 
-        {/* Cards */}
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
-          {accreditations.map((item, index) => (
+        {/* Logos only – no boxes, no names, no descriptions */}
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-8 items-center">
+          {partners.map((partner, index) => (
             <motion.div
-              key={item.name}
+              key={partner.alt}
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: index * 0.1 }}
-              className="text-center p-6 group"
+              className="flex items-center justify-center"
             >
-              <div
-                className="w-20 h-20 mx-auto mb-4 flex items-center justify-center transition-all duration-300 group-hover:scale-110"
-                style={{
-                  backgroundColor: '#F8F8F8',
-                  border: '2px solid #E6E6E6',
-                }}
-              >
-                {item.imgSrc ? (
-                  <img
-                    src={item.imgSrc}
-                    alt={item.name}
-                    className="max-h-14 w-auto object-contain"
-                  />
-                ) : (
-                  <item.icon
-                    size={36}
-                    style={{ color: '#0071BC' }}
-                    strokeWidth={1.5}
-                  />
-                )}
-              </div>
-
-              <h4 className="font-semibold mb-1" style={{ color: '#221F20' }}>
-                {item.name}
-              </h4>
-              <p className="text-sm" style={{ color: '#666666' }}>
-                {item.description}
-              </p>
+              <img
+                src={partner.imgSrc}
+                alt={partner.alt}
+                className="max-h-20 w-auto object-contain"
+              />
             </motion.div>
           ))}
         </div>
 
-        {/* Quote box */}
+        {/* Quote box – unchanged */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -117,7 +86,10 @@ export default function Partnerships() {
             borderLeft: '4px solid #D4AF37',
           }}
         >
-          <p className="text-lg italic" style={{ color: '#5A5A5A' }}>
+          <p
+            className="text-lg italic"
+            style={{ color: '#5A5A5A' }}
+          >
             "Over 30 years of building excellence with a reputation built on trust,
             quality craftsmanship, and exceptional client relationships."
           </p>
