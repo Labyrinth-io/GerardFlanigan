@@ -134,7 +134,7 @@ export default function About() {
                 <p className="leading-relaxed">
                   Our philosophy is simple: every project, regardless of size, deserves the same
                   unwavering commitment to quality, transparency, and client satisfaction. We don't
-                  just build structures—we create lasting relationships built on trust and excellence.
+                  just build structures. We create lasting relationships built on trust and excellence.
                 </p>
                 <p className="leading-relaxed">
                   Today, our team brings together decades of combined experience in construction,
