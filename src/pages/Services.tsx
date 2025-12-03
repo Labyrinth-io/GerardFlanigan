@@ -25,7 +25,7 @@ const services = [
     title: 'Duplexes & Multi-Dwellings',
     description: 'Maximise your land investment with expertly designed and constructed duplexes and multi-dwelling developments that meet market demands while exceeding quality standards.',
     features: ['Dual Occupancy', 'Townhouse Developments', 'Investment Properties', 'Land Subdivision', 'Strata Management'],
-    image: 'https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=800&q=80',
+    image: 'public/images/remyduplux.jpg',
   },
   {
     icon: Hammer,
