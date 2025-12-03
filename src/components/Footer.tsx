@@ -72,6 +72,7 @@ export default function Footer() {
             />
           </div>
 
+          {/* QUICK LINKS – now using same row animation style as Contact */}
           <div>
             <h4
               className="text-sm font-semibold uppercase tracking-[0.2em] mb-6"
@@ -85,16 +86,20 @@ export default function Footer() {
                   <li key={item}>
                     <Link
                       to={createPageUrl(item)}
-                      className="text-sm transition-colors duration-200 hover:pl-2"
-                      style={{ color: '#B8B8B8' }}
-                      onMouseEnter={(e) =>
-                        (e.currentTarget.style.color = '#29ABE2')
-                      }
-                      onMouseLeave={(e) =>
-                        (e.currentTarget.style.color = '#B8B8B8')
-                      }
+                      className="flex items-center transition-all duration-200 hover:pl-2"
                     >
-                      {item}
+                      <span
+                        className="text-sm transition-colors duration-200"
+                        style={{ color: '#B8B8B8' }}
+                        onMouseEnter={(e) =>
+                          (e.currentTarget.style.color = '#29ABE2')
+                        }
+                        onMouseLeave={(e) =>
+                          (e.currentTarget.style.color = '#B8B8B8')
+                        }
+                      >
+                        {item}
+                      </span>
                     </Link>
                   </li>
                 )
@@ -127,6 +132,7 @@ export default function Footer() {
             </ul>
           </div>
 
+          {/* CONTACT – unchanged behaviour (this is the animation we copied) */}
           <div>
             <h4
               className="text-sm font-semibold uppercase tracking-[0.2em] mb-6"
