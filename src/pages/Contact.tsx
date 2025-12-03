@@ -31,8 +31,8 @@ export default function Contact() {
     {
       icon: Mail,
       title: 'Email',
-      value: 'info@gerardflanigan.com.au',
-      link: 'mailto:info@gerardflanigan.com.au',
+      value: 'gflaniganbuilder@gmail.com',
+      link: 'mailto:gflaniganbuilder@gmail.com',
     },
     {
       icon: MapPin,
