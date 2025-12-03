@@ -16,7 +16,7 @@ const projects = [
     id: 2,
     title: '11 John Francis Drive',
     category: 'Premium Home',
-    image: 'public/images/johnfrancisdrive.jpg',
+    image: '/images/johnfrancisdrive.jpg',
     location: 'Carrara, Gold Coast',
   },
   {
@@ -30,7 +30,7 @@ const projects = [
     id: 4,
     title: '15 Whitewash Street',
     category: 'Residential',
-    image: 'public/images/whitewashstreet.webp',
+    image: '/images/whitewashstreet.webp',
     location: 'Bargara',
   },
 ];
