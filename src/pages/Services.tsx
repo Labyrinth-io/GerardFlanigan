@@ -11,7 +11,7 @@ const services = [
     title: 'Commercial & Multi-Level Projects',
     description: 'We specialise in complex commercial developments and multi-storey constructions that demand precision engineering, expert project management, and unwavering attention to safety standards.',
     features: ['Office Buildings', 'Retail Spaces', 'Multi-storey Residential', 'Industrial Facilities', 'Mixed-use Developments'],
-    image: 'https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=800&q=80',
+    image: '/images/baynestreet.webp',
   },
   {
     icon: Home,
