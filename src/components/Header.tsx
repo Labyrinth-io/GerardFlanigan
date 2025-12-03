@@ -1,11 +1,14 @@
-import React, { useState, useEffect } from 'react';
-import { Link } from 'react-router-dom';
+import React, { useState, useEffect, useRef } from 'react';
+import { Link, useLocation } from 'react-router-dom';
 import { createPageUrl } from '../utils';
 import { Menu, X, Phone } from 'lucide-react';
 
 export default function Header() {
   const [isScrolled, setIsScrolled] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const menuRef = useRef<HTMLDivElement>(null);
+  const hamburgerRef = useRef<HTMLButtonElement>(null);
+  const location = useLocation();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -14,6 +17,28 @@ export default function Header() {
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
+
+  useEffect(() => {
+    const handleClickOutside = (event: MouseEvent) => {
+      if (
+        mobileMenuOpen &&
+        menuRef.current &&
+        hamburgerRef.current &&
+        !menuRef.current.contains(event.target as Node) &&
+        !hamburgerRef.current.contains(event.target as Node)
+      ) {
+        setMobileMenuOpen(false);
+      }
+    };
+
+    if (mobileMenuOpen) {
+      document.addEventListener('mousedown', handleClickOutside);
+    }
+
+    return () => {
+      document.removeEventListener('mousedown', handleClickOutside);
+    };
+  }, [mobileMenuOpen]);
 
   const navItems = [
     { name: 'Home', page: 'Home' },
@@ -38,6 +63,15 @@ export default function Header() {
           <Link
             to={createPageUrl('Home')}
             className="flex items-center gap-2 sm:gap-3 flex-shrink-0"
+            onClick={(e) => {
+              if (mobileMenuOpen) {
+                const isHomePage = location.pathname === '/home' || location.pathname === '/';
+                if (isHomePage) {
+                  e.preventDefault();
+                }
+                setMobileMenuOpen(false);
+              }
+            }}
           >
             <img
               src="/Gerard Logo copy.svg"
@@ -106,33 +140,73 @@ export default function Header() {
             ))}
           </nav>
 
-          {/* Phone icon + CTA (desktop) */}
-          <div className="hidden md:flex items-center gap-4 flex-shrink-0">
-            {/* Icon only, still clickable tel link */}
+          {/* Phone icon + CTA (tablet: md to lg) */}
+          <div className="hidden md:flex lg:hidden items-center gap-3 ml-auto flex-shrink-0">
             <a
-  href="tel:0477037911"
-  aria-label="Call Gerard on 0477 037 911"
-  className="group flex items-center transition-all duration-300"
-  style={{ color: '#FEFEFE' }}
->
-  <Phone
-    size={22}
-    className="transition-all duration-300 group-hover:scale-125"
-    style={{
-      color: '#29ABE2',
-      filter: 'drop-shadow(0 0 0px #29ABE2)',
-    }}
-  />
+              href="tel:0477037911"
+              aria-label="Call Gerard on 0477 037 911"
+              className="group flex items-center transition-all duration-300"
+              style={{ color: '#FEFEFE' }}
+            >
+              <Phone
+                size={20}
+                className="transition-all duration-300 group-hover:scale-125"
+                style={{
+                  color: '#29ABE2',
+                  filter: 'drop-shadow(0 0 0px #29ABE2)',
+                }}
+              />
+              <style>
+                {`
+                  .group:hover svg {
+                    filter: drop-shadow(0 0 6px #29ABE2);
+                  }
+                `}
+              </style>
+            </a>
 
-  {/* Glow effect on hover via inline style override */}
-  <style>
-    {`
-      .group:hover svg {
-        filter: drop-shadow(0 0 6px #29ABE2);
-      }
-    `}
-  </style>
-</a>
+            <Link
+              to={createPageUrl('Contact')}
+              className="px-4 py-2 text-xs font-semibold uppercase tracking-wide transition-all duration-300 hover:scale-105"
+              style={{
+                backgroundColor: '#E67E22',
+                color: '#FEFEFE',
+              }}
+              onMouseEnter={(e) =>
+                (e.currentTarget.style.backgroundColor = '#C15427')
+              }
+              onMouseLeave={(e) =>
+                (e.currentTarget.style.backgroundColor = '#E67E22')
+              }
+            >
+              Request a Quote
+            </Link>
+          </div>
+
+          {/* Phone icon + CTA (desktop: lg+) */}
+          <div className="hidden lg:flex items-center gap-4 flex-shrink-0">
+            <a
+              href="tel:0477037911"
+              aria-label="Call Gerard on 0477 037 911"
+              className="group flex items-center transition-all duration-300"
+              style={{ color: '#FEFEFE' }}
+            >
+              <Phone
+                size={22}
+                className="transition-all duration-300 group-hover:scale-125"
+                style={{
+                  color: '#29ABE2',
+                  filter: 'drop-shadow(0 0 0px #29ABE2)',
+                }}
+              />
+              <style>
+                {`
+                  .group:hover svg {
+                    filter: drop-shadow(0 0 6px #29ABE2);
+                  }
+                `}
+              </style>
+            </a>
 
             <Link
               to={createPageUrl('Contact')}
@@ -154,7 +228,8 @@ export default function Header() {
 
           {/* Mobile menu button */}
           <button
-            className="lg:hidden p-2 ml-auto"
+            ref={hamburgerRef}
+            className="lg:hidden p-2"
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
             style={{ color: '#FEFEFE' }}
           >
@@ -164,6 +239,7 @@ export default function Header() {
 
         {/* MOBILE MENU DROPDOWN */}
         <div
+          ref={menuRef}
           className={`lg:hidden overflow-hidden transition-all duration-300 ${
             mobileMenuOpen ? 'max-h-96 pb-6' : 'max-h-0'
           }`}
