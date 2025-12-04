@@ -9,7 +9,6 @@ const stats = [
   { number: '30+', label: 'Years Experience' },
   { number: '500+', label: 'Projects Completed' },
   { number: '100%', label: 'Client Satisfaction' },
-  { number: '50+', label: 'Industry Awards' },
 ];
 
 const values = [
