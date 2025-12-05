@@ -22,6 +22,14 @@ const partners = [
     imgSrc: '/images/kenspumbing.png',
     alt: 'Ken\'s Plumbing',
   },
+  {
+    imgSrc: '/images/clipsal-logo-png_seeklogo-31492.webp',
+    alt: 'Clipsal',
+  },
+  {
+    imgSrc: '/images/handyfinance_logo_horizontal-1.svg',
+    alt: 'Handy Finance',
+  },
 ];
 
 export default function Partnerships() {
@@ -60,7 +68,7 @@ export default function Partnerships() {
         </div>
 
         {/* Logos only – no boxes, no names, no descriptions */}
-        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-8 items-center">
+        <div className="grid grid-cols-1 md:grid-cols-4 gap-8 items-center justify-items-center">
           {partners.map((partner, index) => (
             <motion.div
               key={partner.alt}
