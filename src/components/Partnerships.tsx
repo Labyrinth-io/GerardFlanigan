@@ -76,12 +76,13 @@ export default function Partnerships() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: index * 0.1 }}
-              className="flex items-center justify-center"
+              className={`flex items-center justify-center ${index === 4 ? 'md:col-start-2' : ''}`}
             >
               <img
                 src={partner.imgSrc}
                 alt={partner.alt}
                 className="max-h-32 w-auto object-contain"
+                style={partner.alt === "Ken's Plumbing" ? { maxHeight: '89.6px' } : {}}
                 loading="lazy"
                 decoding="async"
               />
