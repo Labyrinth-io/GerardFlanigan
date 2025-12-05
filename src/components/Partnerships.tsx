@@ -23,7 +23,7 @@ const partners = [
     alt: 'Ken\'s Plumbing',
   },
   {
-    imgSrc: '/images/clipsal-logo-png_seeklogo-31492.webp',
+    imgSrc: 'https://noosaelectric.co/wp-785/wp-content/uploads/clipsal_sunshine_coast.png',
     alt: 'Clipsal',
   },
   {
