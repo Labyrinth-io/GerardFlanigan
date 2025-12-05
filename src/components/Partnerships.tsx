@@ -68,15 +68,38 @@ export default function Partnerships() {
         </div>
 
         {/* Logos only – no boxes, no names, no descriptions */}
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-8 items-center justify-items-center">
-          {partners.map((partner, index) => (
+        {/* First row - 4 logos */}
+        <div className="grid grid-cols-1 md:grid-cols-4 gap-8 items-center justify-items-center mb-8 md:mb-8">
+          {partners.slice(0, 4).map((partner, index) => (
             <motion.div
               key={partner.alt}
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: index * 0.1 }}
-              className={`flex items-center justify-center ${index === 4 ? 'md:col-start-2' : ''}`}
+              className="flex items-center justify-center"
+            >
+              <img
+                src={partner.imgSrc}
+                alt={partner.alt}
+                className="max-h-32 w-auto object-contain"
+                loading="lazy"
+                decoding="async"
+              />
+            </motion.div>
+          ))}
+        </div>
+
+        {/* Second row - 3 logos centered */}
+        <div className="flex flex-col md:flex-row gap-8 items-center justify-center">
+          {partners.slice(4).map((partner, index) => (
+            <motion.div
+              key={partner.alt}
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ delay: (index + 4) * 0.1 }}
+              className="flex items-center justify-center"
             >
               <img
                 src={partner.imgSrc}
