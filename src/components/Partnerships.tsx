@@ -27,7 +27,7 @@ const partners = [
     alt: 'Clipsal',
   },
   {
-    imgSrc: '/images/handyfinance_logo_horizontal-1.svg',
+    imgSrc: 'https://cdn.finder.com.au/finder-au/wp-uploads/2020/11/Handy-Finance-logo-250x250-1.png',
     alt: 'Handy Finance',
   },
 ];
