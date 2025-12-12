@@ -42,7 +42,7 @@ const projects = [
   // PREMIUM HOMES
   {
     id: 4,
-    title: '11 John Francis Drive, Carrara',
+    title: 'Carrara, Gold Coast',
     category: 'Premium Homes',
     location: 'Carrara, Gold Coast, QLD',
     year: '2009',
